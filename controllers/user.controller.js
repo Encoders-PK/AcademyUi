@@ -8,8 +8,8 @@ const router = express.Router();
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.SMPT_MAIL,
-        pass: process.env.SMPT_PASSWORD,
+        user: process.env.smptMail,
+        pass: process.env.smptPassword,
     },
 });
 
@@ -31,7 +31,7 @@ router.post('/signup', async(req, res) => {
 
         // Prepare the email content with user details
         const mailOptions = {
-            from: process.env.SMPT_MAIL,
+            from: process.env.smptMail,
             to: 'shafyhussain909@gmail.com',
             subject: 'New User Signup Details',
             text: `

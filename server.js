@@ -157,5 +157,5 @@ app.use('/api/v1/user', userRoutes);
 
 // Start Server
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.port || 5000;
 app.listen(5000, () => console.log(`Server running on port 5000`));
