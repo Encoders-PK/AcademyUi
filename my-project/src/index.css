@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.curve-bottom {
+  border-bottom-left-radius: 30px; /* Adjust as needed */
+  border-bottom-right-radius: 30px; /* Adjust as needed */
+}
+
+.custom-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px; /* Adjust the value to control the space between the text and the underline */
+  height: 1px; /* Adjust the value to control the thickness of the underline */
+  background-color: currentColor; /* Use the current text color for the underline */
+}
+
+@keyframes smoothScale {
+  0% {
+    transform: scale(1);
+    color: #078954;
+  }
+  50% {
+    transform: scale(1.4);
+    color: #05b045;
+  }
+  
+  100% {
+    transform: scale(1);
+    color: #078954;
+  }
+}
+
+.animation-smoothScale {
+  animation: smoothScale 1s ease-in-out infinite;
+}
+
+.content {
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.slide-section {
+  max-height: 0;
+  opacity: 0;
+}
+
+.content > .slide-section {
+  max-height: 500px; /* Adjust based on your content height */
+  opacity: 1;
+}
+
+.content > .slide-section {
+  max-height: 500px; /* Adjust based on your content height */
+  opacity: 1;
+}
