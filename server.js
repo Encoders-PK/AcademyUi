@@ -155,6 +155,8 @@ app.use(cors({
 app.use('/api/v1/user', userRoutes);
 
 
+app.get('/', (req, res) => res.send('HRM System API'));
+
 // Start Server
 
 const PORT = process.env.port || 5000;

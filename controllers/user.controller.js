@@ -32,7 +32,7 @@ router.post('/signup', async(req, res) => {
         // Prepare the email content with user details
         const mailOptions = {
             from: process.env.smptMail,
-            to: 'shafyhussain909@gmail.com',
+            to: 'engrsyedusamaakhtar@gmail.com',
             subject: 'New User Signup Details',
             text: `
                 A new user has signed up:
