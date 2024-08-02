@@ -124,14 +124,49 @@
 
 
 
+// import express from 'express';
+// import cors from 'cors';
+// import dotenv from 'dotenv';
+// import connectDataBase from './db/mongoose.js';
+// import bodyParser from 'body-parser';
+// import userRoutes from './controllers/user.controller.js';
+
+// // Load environment variables
+// dotenv.config();
+
+// // Connect to the database
+// connectDataBase();
+
+// const app = express();
+
+// // Middleware
+// app.use(express.json());
+// app.use(cors({
+//     origin: "http://localhost:5173",
+//     credentials: true,
+// }));
+
+// app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+
+// // Routes
+// app.use('/api/v1/user', userRoutes);
+
+// app.get('/', (req, res) => res.send('HRM System API'));
+
+// // Start Server
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDataBase from './db/mongoose.js';
 import bodyParser from 'body-parser';
+import userRoutes from './controllers/user.controller.js';
 
 // Load environment variables
 dotenv.config();
+
 
 // Connect to the database
 connectDataBase();
@@ -145,19 +180,14 @@ app.use(cors({
     credentials: true,
 }));
 
- app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
-
- //Route 
-
- import userRoutes from './controllers/user.controller.js'
-
+// Routes
 app.use('/api/v1/user', userRoutes);
-
 
 app.get('/', (req, res) => res.send('HRM System API'));
 
 // Start Server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-const PORT = process.env.port || 5000;
-app.listen(5000, () => console.log(`Server running on port 5000`));
