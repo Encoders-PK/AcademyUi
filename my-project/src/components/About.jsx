@@ -40,10 +40,12 @@
 
 
 import aboutPic from "../assets/aboutPic.png";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { BiMessageRoundedDots } from "react-icons/bi";
 
 const About = () => {
   return (
-    <div className="md:w-[75%] w-full px-4  mx-auto mt-12 py-12">
+    <div className="md:w-[75%] w-full px-4 mx-auto md:mt-12 md:py-12">
       {/* container */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         {/* left side */}
@@ -51,7 +53,7 @@ const About = () => {
           <h1 className="text-2xl md:text-3xl font-bold text-[#5A5A5A] md:leading-tight">
             Welcome to the most Reliable &<br />
             Affordable
-            <span className="text-[#078954]"> Tutoring Help</span> by Top <br />
+            <span className="text-[#F1B815]"> Tutoring Help</span> by Top <br />
             Notch Paki PhD Experts
           </h1>
           <p className="py-6 font-medium text-sm md:text-base">
@@ -65,6 +67,22 @@ const About = () => {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
+          <div className="flex flex-col md:flex-row gap-4 py-8 ">
+            <div className="bg-[#007285] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+              <div className="flex items-center gap-2">
+                <BiMessageRoundedDots className="text-2xl md:text-3xl" color="white" />
+                <h1 className="text-white font-bold text-sm ">TALK TO OUR EXPERT</h1>
+              </div>
+            </div>
+
+            <div className="bg-[#408955] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+              <div className="flex items-center gap-2">
+                <IoLogoWhatsapp className="text-2xl md:text-3xl" color="white" />
+                <h1 className="text-white font-bold text-sm  uppercase">Whatsapp Now</h1>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* right side */}

@@ -104,6 +104,10 @@
 
 import { useState } from "react";
 import FaqSide from "../assets/FaqSide.png";
+import faq from "../assets/faq.png";
+import { TbMessages } from "react-icons/tb";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { BiMessageRoundedDots } from "react-icons/bi";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -128,19 +132,32 @@ const Faq = () => {
       </div>
 
       {/* Container */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-20">
 
         {/* Left Side */}
-        <div className="w-full md:w-[30%] hidden md:block">
-          <img src={FaqSide} alt="FAQ Illustration" className="w-full h-auto" />
+        <div className="w-full md:w-[35%] hidden md:block">
+          <img src={faq} alt="FAQ Illustration" className="w-full h-auto" />
+          <div className="flex flex-col md:flex-row gap-4 py-8 ">
+            <div className="bg-[#007285] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+              <div className="flex items-center gap-2">
+                <BiMessageRoundedDots className="text-2xl md:text-3xl" color="white" />
+                <h1 className="text-white font-bold text-sm">TALK TO OUR EXPERT</h1>
+              </div>
+            </div>
+
+            <div className="bg-[#408955] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+              <div className="flex items-center gap-2">
+                <IoLogoWhatsapp className="text-2xl md:text-3xl" color="white" />
+                <h1 className="text-white font-bold text-sm uppercase">Whatsapp Now</h1>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Right Side */}
-        <div className="w-full md:w-[50%] px-4 md:px-8">
-          <h2 className="text-2xl md:text-3xl text-[#5A5A5A] py-6">
-            Have your questions answered
-          </h2>
-          <div className="bg-[#010621] text-white rounded-lg shadow-md p-4">
+        <div className="w-full md:w-[45%] px-4 md:px-8">
+         
+          <div className=" bg-[#007285] text-white rounded-lg shadow-md p-4">
             {faqs.map((faq, index) => (
               <FAQItem
                 key={index}
@@ -170,7 +187,7 @@ const FAQItem = ({ question, isOpen, onClick }) => {
         </span>
       </button>
       {isOpen && (
-        <div className="px-4 py-2 text-white bg-[#010621]">
+        <div className="px-4 py-2 text-white bg-[#007285]">
           <p>
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point

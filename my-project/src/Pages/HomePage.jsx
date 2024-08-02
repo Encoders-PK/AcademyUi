@@ -10,14 +10,21 @@ import Faq from '../components/Faq'
 import ContactUs from '../components/ContactUs'
 import Footer from '../components/Footer'
 import Banner from '../components/Banner'
+import Services from '../components/Services'
+import StickyButtons from '../components/StickyButtons'
+import FooterBanner from '../components/FooterBanner'
+import StickyPopup from '../components/StickyPopup'
 
 const HomePage = () => {
   return (
     <div>
+      {/* <Slider/> */}
       <Head/>
       <Navbar/>
+      <StickyButtons/>
       <Banner/>
       <About/>
+      <Services/>
       <RecentReviews/>
       <Satisfactory/>
       <SubjectsCard/>
@@ -26,6 +33,8 @@ const HomePage = () => {
       <Faq />
       <ContactUs />
       <Footer/>
+      <StickyPopup/>
+      <FooterBanner/>
     </div>
   )
 }

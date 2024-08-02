@@ -1,10 +1,17 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  @apply font-sans;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .curve-bottom {
-  border-bottom-left-radius: 30px; /* Adjust as needed */
-  border-bottom-right-radius: 30px; /* Adjust as needed */
+  border-bottom-left-radius: 60px; /* Adjust as needed */
+  border-bottom-right-radius: 60px; /* Adjust as needed */
 }
 
 .custom-underline {
@@ -61,3 +68,8 @@
   max-height: 500px; /* Adjust based on your content height */
   opacity: 1;
 }
+
+/* 
+body {
+  @apply font-sans;
+} */

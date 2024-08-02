@@ -144,12 +144,20 @@
 
 
 
-import { FaCircleNotch } from "react-icons/fa";
-import { TbMessages } from "react-icons/tb";
+
+
+import { BiMessageRoundedDots } from "react-icons/bi";
+
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FcGoogle } from "react-icons/fc";
 import { IoStarSharp, IoStarHalfOutline } from "react-icons/io5";
 import ukwriters from "../assets/ukwriters.png";
+import trustpilot from '../assets/trustpilot.png'
+import sitejabber from '../assets/sitejabber.png'
+import { LuSunMedium } from "react-icons/lu";
+import featureline from '../assets/featureline.png'
+
+
+
 import SignUp from "./SignUp";
 
 
@@ -157,14 +165,17 @@ const Banner = () => {
   return (
     <>
     
-    <div className="bg-[#020621]  h-auto w-full curve-bottom">
+   <div className="bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41]">
+   <div className="bg-banner-bg   bg-cover bg-center h-auto w-full">
     <div className="md:w-[75%] w-full md:mx-auto pl-2 md:px-0 py-12">
       <div className="flex flex-col md:flex-row gap-8 md:gap-40">
         {/* Left Container */}
         <div className="text-white md:w-[55%]">
-          <h1 className="text-white text-2xl md:text-2xl leading-tight">
+          <h1 className="text-[#ffb800] font-bold text-2xl md:text-2xl leading-tight">
             FREE AI Testing REPORT
           </h1>
+         
+
           <h1 className="text-white text-3xl md:text-4xl  font-bold leading-tight">
             TOP NOTCH ACADEMIC HELP BY
           </h1>
@@ -172,66 +183,72 @@ const Banner = () => {
             BRITISH PhD EXPERTS
           </h1>
 
-          <p className="whitespace-pre-wrap py-6 text-sm md:text-base lg:text-lg">
+          <img src={featureline} alt="" className="mt-2" />
+
+       
+         <p className="whitespace-pre-wrap py-6 text-sm md:text-base lg:text-lg">
             Team Tutoring providing top quality academic assistance to help
             <br />
             students succeed in their academic career
           </p>
 
+         
+         
+
           <div className="flex flex-wrap gap-4 py-4">
             <div className="flex items-center gap-1">
-              <FaCircleNotch color="#3B7F4E" />
+              <LuSunMedium size={20} color="#F3C30E" />
               <h1 className="text-sm md:text-base lg:text-lg">24/7 Free Support</h1>
             </div>
             <div className="flex items-center gap-1">
-              <FaCircleNotch color="#3B7F4E" />
+              <LuSunMedium size={20} color="#F3C30E" />
               <h1 className="text-sm md:text-base lg:text-lg">Best Price</h1>
             </div>
             <div className="flex items-center gap-1">
-              <FaCircleNotch color="#3B7F4E" />
+              <LuSunMedium size={20} color="#F3C30E" />
               <h1 className="text-sm md:text-base lg:text-lg">100% Money Back Guarantee</h1>
             </div>
             <div className="flex items-center gap-1">
-              <FaCircleNotch color="#3B7F4E" />
+              <LuSunMedium size={20} color="#F3C30E" />
               <h1 className="text-sm md:text-base lg:text-lg">Top Quality Work</h1>
             </div>
             <div className="flex items-center gap-1">
-              <FaCircleNotch color="#3B7F4E" />
+              <LuSunMedium size={20} color="#F3C30E" />
               <h1 className="text-sm md:text-base lg:text-lg">Plagiarism Free</h1>
             </div>
             <div className="flex items-center gap-1">
-              <FaCircleNotch color="#3B7F4E" />
+              <LuSunMedium size={20} color="#F3C30E" />
               <h1 className="text-sm md:text-base lg:text-lg">On time Deliver</h1>
             </div>
           </div>
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4 py-8 ">
-            <div className="bg-[#367285] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+            <div className="bg-[#ffb800] w-[460px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
-                <TbMessages className="text-2xl md:text-3xl" />
-                <h1 className="text-white font-bold text-sm md:text-base">TALK TO OUR EXPERT</h1>
+                <BiMessageRoundedDots className="text-2xl md:text-3xl" color="white" />
+                <h1 className="text-white font-bold text-sm uppercase">TALK TO OUR EXPERT</h1>
               </div>
             </div>
 
-            <div className="bg-[#408955] w-[470px] md:w-[200px] h-10 flex justify-center rounded-md">
+            <div className="bg-white w-[460px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
-                <IoLogoWhatsapp className="text-2xl md:text-3xl" />
-                <h1 className="text-white font-bold text-sm md:text-base">Whatsapp Now</h1>
+                <IoLogoWhatsapp className="text-2xl md:text-3xl" color="#408955" />
+                <h1 className="text-[#408955] font-bold text-sm  uppercase">Whatsapp Now</h1>
               </div>
             </div>
           </div>
 
-          <div className="flex gap-4 py-4">
-            <div className="bg-[#010414] w-[180px] md:h-[80px] h-[60px] p-2 rounded-md border border-white">
+          <div className="flex flex-wrap md:gap-4 gap-2 py-4">
+            <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
               <div className="flex items-center justify-between h-full">
                 <div>
                   {/* <FcGoogle size={35} /> */}
                   <img src={ukwriters} className="w-[35px] h-[35px]" alt="" />
                 </div>
-                <div className="flex flex-col items-end">
+                <div className="flex flex-col items-start">
                   <div className="flex items-center gap-1">
-                    <h1 className="text-2xl font-bold">4.9</h1>
+                    <h1 className="text-xl font-bold">4.9</h1>
                     <div className="flex">
                       <IoStarSharp color="#E85F2A" />
                       <IoStarSharp color="#E85F2A" />
@@ -240,19 +257,19 @@ const Banner = () => {
                       <IoStarHalfOutline color="#E85F2A" />
                     </div>
                   </div>
-                  <h1 className="text-sm  mr-6">UK Top Writers</h1>
+                  <h1 className="text-sm">UK Top Writers</h1>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#010414] w-[180px] md:h-[80px] h-[60px] p-2 rounded-md border border-white">
+            <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
               <div className="flex items-center justify-between h-full">
                 <div>
-                  <FcGoogle size={35} />
+                 <img src={trustpilot} alt="" className="w-[35px] h-[35px]" />
                 </div>
-                <div className="flex flex-col items-end">
+                <div className="flex flex-col items-start">
                   <div className="flex items-center gap-1">
-                    <h1 className="text-2xl font-bold">4.8</h1>
+                    <h1 className="text-xl font-bold ">4.8</h1>
                     <div className="flex">
                       <IoStarSharp color="#E85F2A" />
                       <IoStarSharp color="#E85F2A" />
@@ -261,7 +278,29 @@ const Banner = () => {
                       <IoStarHalfOutline color="#E85F2A" />
                     </div>
                   </div>
-                  <h1 className="text-sm  mr-6">Google Reviews</h1>
+                  <h1 className="text-sm">TrustPilot</h1>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="bg-[#00000080]  w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
+              <div className="flex items-center justify-between">
+                <div>
+                <img src={sitejabber} alt="" className="w-[35px] h-[35px]" />
+                </div>
+                <div className="flex flex-col items-start">
+                  <div className="flex items-center gap-1">
+                    <h1 className="text-xl font-bold">4.8</h1>
+                    <div className="flex">
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarHalfOutline color="#E85F2A" />
+                    </div>
+                  </div>
+                  <h1 className="text-sm mr-4">SiteJabber</h1>
                 </div>
               </div>
             </div>
@@ -275,6 +314,7 @@ const Banner = () => {
       </div>
     </div>
     </div>
+   </div>
     
     </>
     

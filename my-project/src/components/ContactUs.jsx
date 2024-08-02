@@ -1,7 +1,6 @@
 // import { IoLogoWhatsapp } from "react-icons/io";
 // import { FaRegThumbsUp } from "react-icons/fa";
 
-
 // const ContactUs = () => {
 //   return (
 //     <div className="w-[75%] h-[550px]  mx-auto my-20">
@@ -42,7 +41,6 @@
 //             </div>
 //           </div>
 
-
 //         </div>
 
 //         {/* Right Side  */}
@@ -73,7 +71,7 @@
 //                 <button className="w-[150px] h-12 text-white bg-[#367285] flex items-center justify-center my-4 rounded-md mx-auto">
 //                     Submit
 //                 </button>
-                
+
 //               </div>
 
 //                 </form>
@@ -88,11 +86,9 @@
 
 // export default ContactUs;
 
-
-
-
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaRegThumbsUp } from "react-icons/fa";
+import { BiMessageRoundedDots } from "react-icons/bi";
 
 const ContactUs = () => {
   return (
@@ -120,18 +116,28 @@ const ContactUs = () => {
             success.
           </p>
 
-          <div className="flex flex-col md:flex-row items-center gap-2 py-4">
-            <div className="bg-[#367285] w-full md:w-[260px] h-12 flex justify-center rounded-md">
+          <div className="flex flex-col md:flex-row gap-4 py-8 ">
+            <div className="bg-[#007285] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
-                <FaRegThumbsUp className="text-2xl" color="white" />
-                <h1 className="text-white font-bold text-sm md:text-base">TALK TO OUR EXPERT</h1>
+                <BiMessageRoundedDots
+                  className="text-2xl md:text-3xl"
+                  color="white"
+                />
+                <h1 className="text-white font-bold text-sm">
+                  TALK TO OUR EXPERT
+                </h1>
               </div>
             </div>
 
-            <div className="bg-[#408955] w-full md:w-[260px] h-12 flex justify-center rounded-md">
+            <div className="bg-[#408955] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
-                <IoLogoWhatsapp className="text-2xl" color="white" />
-                <h1 className="text-white font-bold text-sm md:text-base">Whatsapp Now</h1>
+                <IoLogoWhatsapp
+                  className="text-2xl md:text-3xl"
+                  color="white"
+                />
+                <h1 className="text-white font-bold text-sm  uppercase">
+                  Whatsapp Now
+                </h1>
               </div>
             </div>
           </div>
@@ -139,9 +145,10 @@ const ContactUs = () => {
 
         {/* Right Side */}
         <div className="w-full md:w-auto flex justify-center -mt-2 md:mt-0">
-          <div className="bg-[#020621] w-[90%] md:w-[450px] h-auto md:h-[370px] rounded-2xl p-6 md:p-8">
+          <div className="bg-[#007285] w-[90%] md:w-[450px] h-auto  rounded-2xl p-6 md:p-8">
             <h1 className="text-white text-xl md:text-2xl font-bold pb-4">
-              Our team is available 24/7 <br /> to provide you the best assistance
+              Our team is available 24/7 <br /> to provide you the best
+              assistance
             </h1>
             <form action="">
               <div className="flex flex-col gap-2 mt-2">
@@ -161,7 +168,7 @@ const ContactUs = () => {
                   placeholder="Phone No."
                 />
 
-                <button className="w-full md:w-[150px] h-12 text-white bg-[#367285] flex items-center justify-center my-4 rounded-md mx-auto">
+                <button className="w-full md:w-[150px] h-12 text-[#16334F] font-bold bg-white flex items-center justify-center my-4 rounded-md mx-auto">
                   Submit
                 </button>
               </div>
