@@ -247,8 +247,8 @@ const FeatureCard = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto py-8 my-10 px-4">
-      <div className="text-center mb-10">
-        <h1 className="text-3xl md:text-4xl text-[#5A5A5A] font-bold pb-1">
+      <div className="text-center mb-10"> 
+        <h1 className="text-3xl md:text-5xl uppercase text-[#5A5A5A] font-bold pb-1">
           Your satisfaction is guaranteed
         </h1>
         <h3 className="text-lg md:text-xl text-[#5A5A5A] font-medium">

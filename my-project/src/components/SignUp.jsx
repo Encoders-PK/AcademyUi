@@ -291,31 +291,12 @@ const SignUp = () => {
               <img src={limitedOffer} className="w-[170px] h-[90px]" alt="" />
             </div> */}
 
-            {/* <div className="">
-
-
-              <div className='flex gap-10  items-start'>
-                <h1 className='w-[70px] h-[70px] bg-[#007285] px-4 py-4 text-4xl text-white font-semibold rounded-md'>0{time.hours} </h1>
-                <h1 className='w-[70px] h-[70px] bg-[#007285] px-4 py-4 text-4xl text-white font-semibold rounded-md'>{time.minutes}</h1>
-                <h1 className='w-[70px] h-[70px] bg-[#007285] px-4 py-4 text-4xl text-white font-semibold rounded-md'>{time.seconds}</h1>
-              </div>
-              
-             
-            
-
-              <div className='flex justify-around items-center mt-1 gap-10'>
-              <h1 className='text-sm uppercase font-semibold  '>Hours</h1>
-              <h1 className='text-sm  uppercase font-semibold pl-4'>Minutes</h1>
-              <h1 className='text-sm uppercase font-semibold '>Seconds</h1>
-              </div>
-              
-
-            </div> */}
+          
 
             <div className="">
               <div className="flex items-center justify-center gap-4">
                 <div className="flex flex-col items-center">
-                  <h1 className="w-[70px] h-[70px] bg-[#007285] flex justify-center items-center text-4xl text-white font-semibold rounded-md">
+                  <h1 className="w-[70px] h-[70px] bg-[#007285] flex justify-center items-center text-4xl text-white font-semibold shadow-numbers rounded-md">
                     0{time.hours}
                   </h1>
                   <h1 className="text-sm uppercase font-semibold mt-1">
@@ -324,7 +305,7 @@ const SignUp = () => {
                 </div>
                 <h1 className="text-4xl font-semibold -mt-6">:</h1>
                 <div className="flex flex-col items-center">
-                  <h1 className="w-[70px] h-[70px] bg-[#007285] flex justify-center items-center text-4xl text-white font-semibold rounded-md">
+                  <h1 className="w-[70px] h-[70px] bg-[#007285] flex justify-center items-center text-4xl text-white font-semibold shadow-numbers rounded-md">
                     {time.minutes}
                   </h1>
                   <h1 className="text-sm uppercase font-semibold ">
@@ -333,7 +314,7 @@ const SignUp = () => {
                 </div>
                 <h1 className="text-4xl font-semibold -mt-6">:</h1>
                 <div className="flex flex-col items-center">
-                  <h1 className="w-[70px] h-[70px] bg-[#007285] flex justify-center items-center text-4xl text-white font-semibold rounded-md">
+                  <h1 className="w-[70px] h-[70px] bg-[#007285] flex justify-center items-center text-4xl text-white font-semibold shadow-numbers rounded-md">
                     {time.seconds}
                   </h1>
                   <h1 className="text-sm uppercase font-semibold mt-1">
@@ -345,7 +326,7 @@ const SignUp = () => {
           </div>
         </div>
 
-        <div className="bg-green-700 w-full h-12 rounded-b-lg -mt-[14px]">
+        <div className="bg-green-700 w-full h-12 rounded-b-lg -mt-6">
           <div className="flex items-center justify-center gap-2 pt-2">
             <div>
               <img src={hotOfferIcon} className="w-7 h-7" alt="hotofferIcon" />

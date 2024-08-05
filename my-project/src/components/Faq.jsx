@@ -125,7 +125,7 @@ const Faq = () => {
   return (
     <div className="w-full md:w-[90%] px-4 py-24 mx-auto">
       <div className="text-center pb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#5A5A5A]">FAQ</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-[#5A5A5A]">FAQ</h1>
         <h2 className="text-xl md:text-2xl text-[#5A5A5A] pt-4 px-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </h2>
@@ -182,7 +182,7 @@ const FAQItem = ({ question, isOpen, onClick }) => {
         className="w-full text-left px-4 py-3 focus:outline-none flex justify-between items-center"
       >
         <span className="text-lg">{question}</span>
-        <span className={`text-xl w-7 h-7 flex items-center justify-center font-bold rounded-full p-1 ${isOpen ? 'bg-white text-black' : 'bg-gray-600 text-white'}`}>
+        <span className={`text-xl w-7 h-7 flex items-center justify-center font-bold rounded-full p-1 ${isOpen ? 'bg-white text-black' : 'bg-[#0F203D] text-white'}`}>
           {isOpen ? "x" : "+"}
         </span>
       </button>

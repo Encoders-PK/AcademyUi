@@ -4,6 +4,9 @@ import { SlBadge } from "react-icons/sl";
 const Cards = () => {
   return (
     <div className="w-[90%] md:w-[75%] h-auto mx-auto mt-8">
+
+
+      <h1 className="upppercase text-center text-4xl md:text-6xl font-bold py-10 text-[#5A5A5A]">Card Section</h1>
       <div className="flex flex-wrap gap-4 justify-center p-3">
         {/* card one */}
         <div className="w-full sm:w-[46%] md:w-[48%] lg:w-[370px] md:h-[350px] lg:h-[350px] h-auto bg-[#007285] shadow-2xl mb-4 rounded-xl">

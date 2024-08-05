@@ -14,6 +14,8 @@ import Services from '../components/Services'
 import StickyButtons from '../components/StickyButtons'
 import FooterBanner from '../components/FooterBanner'
 import StickyPopup from '../components/StickyPopup'
+import GetDiscount from '../components/GetDiscount'
+import OurExpert from '../components/OurExpert'
 
 const HomePage = () => {
   return (
@@ -25,12 +27,14 @@ const HomePage = () => {
       <Banner/>
       <About/>
       <Services/>
+      <OurExpert/>
       <RecentReviews/>
       <Satisfactory/>
       <SubjectsCard/>
       <Cards/>
       <DiscountBanner/>
       <Faq />
+      <GetDiscount/>
       <ContactUs />
       <Footer/>
       <StickyPopup/>

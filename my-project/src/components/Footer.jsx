@@ -95,6 +95,7 @@ import badge1 from '../assets/badge1.png'
 import instagram from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
 import whatsapp from '../assets/whatsapp.png'
+import logo from "../assets/ta-logo.png";
 
 
 
@@ -104,16 +105,16 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41] text-white py-8 md:py-20 w-full mt-12">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between text-center md:text-left">
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
-          <h3 className="text-xl md:text-2xl font-bold">Logo Here</h3>
+        <div className="flex justify-center"><img src={logo} className="w-[400px] h-auto -ml-8" alt="logoPic" /></div>
           <p className="mt-4 text-sm md:text-base">
             We review your documents to ensure that all fonts, margins, indentations, and other formatting elements are used consistently. Our professional team strives to provide quality service and we are ready to assist you.
           </p>
          
           <h1 className='mt-4 font-bold'>Our Social Media Links</h1>
-          <div className='flex items-center gap-2 mt-2'>
-          <div><img src={facebook} alt="" /></div>
-         <div><img src={instagram} alt="" /></div>
-          <div><img src={whatsapp} alt="" /></div>
+          <div className='flex items-center justify-center md:justify-start gap-2 mt-2'>
+          <div><img src={facebook} className='w-8 h-8' alt="" /></div>
+         <div><img src={instagram} className='w-8 h-8' alt="" /></div>
+          <div><img src={whatsapp} className='w-8 h-8' alt="" /></div>
 
           </div>
         </div>
@@ -139,7 +140,7 @@ const Footer = () => {
         </div>
         <div className="w-full md:w-1/5">
           <h3 className="text-lg md:text-xl font-bold mb-2">Secure Payment</h3>
-          <div><img src={badge1} className='w-[340px] h-[160px] ' alt="" /></div>
+          <div className='flex justify-center'><img src={badge1} className='w-[340px] h-[160px] ' alt="" /></div>
 
           {/* <div className='flex '>
             <div><img src={badge1} alt="badge" /></div>

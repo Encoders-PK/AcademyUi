@@ -282,7 +282,7 @@ const RecentReviews = () => {
   return (
     <div className="w-full h-auto bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41] py-16">
       <div className="text-white text-center pb-8">
-        <h1 className="md:text-6xl text-2xl font-bold">
+        <h1 className="md:text-6xl text-3xl font-bold">
           CUSTOMER SATISFACTION
         </h1>
         <p className="text-xl px-1 md:px-0 font-semibold">
@@ -292,71 +292,72 @@ const RecentReviews = () => {
 
       {/* Reviews Button */}
 
-      <div className="flex flex-wrap justify-center md:gap-4 gap-2 py-4">
-        <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
-          <div className="flex items-center justify-between h-full">
-            <div>
-              {/* <FcGoogle size={35} /> */}
-              <img src={ukwriters} className="w-[35px] h-[35px]" alt="" />
-            </div>
-            <div className="flex flex-col items-start text-white">
-              <div className="flex items-center gap-1">
-                <h1 className="text-xl font-bold">4.9</h1>
-                <div className="flex">
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarHalfOutline color="#E85F2A" />
+      <div className="flex justify-center pr-2 md:pr-0 md:gap-4 gap-1 py-4">
+            <div className="bg-[#00000080] w-[160px] md:w-[180px] md:h-[60px] h-[60px]  md:p-3 lg:p-3 rounded-md border border-white">
+              <div className="flex items-center justify-between text-white h-full">
+                <div>
+                  {/* <FcGoogle size={35} /> */}
+                  <img src={ukwriters} className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" alt="" />
+                </div>
+                <div className="flex flex-col items-start ">
+                  <div className="flex items-center gap-1">
+                    <h1 className="text-base md:text-xl font-bold">4.9</h1>
+                    <div className="flex">
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarHalfOutline color="#E85F2A" />
+                    </div>
+                  </div>
+                  <h1 className="text-sm">UK Top Writers</h1>
                 </div>
               </div>
-              <h1 className="text-sm">UK Top Writers</h1>
             </div>
-          </div>
-        </div>
 
-        <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
-          <div className="flex items-center justify-between h-full">
-            <div>
-              <img src={trustpilot} alt="" className="w-[35px] h-[35px]" />
-            </div>
-            <div className="flex flex-col items-start text-white">
-              <div className="flex items-center gap-1">
-                <h1 className="text-xl font-bold ">4.8</h1>
-                <div className="flex">
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarHalfOutline color="#E85F2A" />
+            <div className="bg-[#00000080] w-[160px] md:h-[60px] md:w-[180px] h-[60px]  md:p-3 lg:p-3 rounded-md border border-white">
+              <div className="flex items-center justify-between text-white h-full">
+                <div>
+                 <img src={trustpilot} alt="" className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" />
+                </div>
+                <div className="flex flex-col items-start">
+                  <div className="flex items-center gap-1">
+                    <h1 className="text-base md:text-xl font-bold ">4.8</h1>
+                    <div className="flex">
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarHalfOutline color="#E85F2A" />
+                    </div>
+                  </div>
+                  <h1 className="text-sm">TrustPilot</h1>
                 </div>
               </div>
-              <h1 className="text-sm">TrustPilot</h1>
             </div>
-          </div>
-        </div>
 
-        <div className="bg-[#00000080]  w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
-          <div className="flex items-center justify-between">
-            <div>
-              <img src={sitejabber} alt="" className="w-[35px] h-[35px]" />
-            </div>
-            <div className="flex flex-col items-start text-white">
-              <div className="flex items-center gap-1">
-                <h1 className="text-xl font-bold">4.8</h1>
-                <div className="flex">
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarSharp color="#E85F2A" />
-                  <IoStarHalfOutline color="#E85F2A" />
+
+            <div className="bg-[#00000080]  w-[160px] md:w-[180px] md:h-[60px] h-[60px] p-1 md:p-2 lg:p-2 rounded-md border border-white">
+              <div className="flex items-center justify-between text-white">
+                <div>
+                <img src={sitejabber} alt="" className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" />
+                </div>
+                <div className="flex flex-col items-start ">
+                  <div className="flex items-center gap-1">
+                    <h1 className="text-base md:text-xl font-bold">4.8</h1>
+                    <div className="flex">
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarSharp color="#E85F2A" />
+                      <IoStarHalfOutline color="#E85F2A" />
+                    </div>
+                  </div>
+                  <h1 className="text-sm mr-4">SiteJabber</h1>
                 </div>
               </div>
-              <h1 className="text-sm mr-4">SiteJabber</h1>
             </div>
           </div>
-        </div>
-      </div>
 
       {/* Cards Section */}
       <div className="relative flex items-center justify-center mt-8">

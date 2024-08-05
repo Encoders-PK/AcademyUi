@@ -87,13 +87,13 @@
 // export default ContactUs;
 
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FaRegThumbsUp } from "react-icons/fa";
+
 import { BiMessageRoundedDots } from "react-icons/bi";
 
 const ContactUs = () => {
   return (
-    <div className="w-[90%] md:w-[75%] h-auto mx-auto md:my-24 contact-section">
-      <h1 className="text-[#5A5A5A] text-4xl md:text-5xl text-center font-bold md:pb-12 md:py-4">
+    <div className="w-full md:w-[75%] h-auto  md:my-24 contact-section mx-auto  mt-12">
+      <h1 className="text-[#5A5A5A] text-4xl md:text-6xl text-center font-bold md:pb-12 md:py-4">
         CONTACT US
       </h1>
 
@@ -105,7 +105,7 @@ const ContactUs = () => {
             One Stop Solution to All <br /> Academic Worries
           </h1>
 
-          <p className="text-sm md:text-base text-[#333333] pb-6">
+          <p className="text-sm md:text-base pr-4 text-[#333333] pb-6">
             Struggling with looming deadlines and intricate assignments? At
             Academians, we understand the pressure students face daily. If
             you're constantly thinking, "Who can write my assignment for me?" or
@@ -116,8 +116,8 @@ const ContactUs = () => {
             success.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4 py-8 ">
-            <div className="bg-[#007285] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+          <div className="flex flex-col md:flex-row mx-3 md:mx-0 gap-4 py-8 ">
+            <div className="bg-[#007285] w-[460px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <BiMessageRoundedDots
                   className="text-2xl md:text-3xl"
@@ -129,7 +129,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="bg-[#408955] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+            <div className="bg-[#408955] w-[460px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <IoLogoWhatsapp
                   className="text-2xl md:text-3xl"

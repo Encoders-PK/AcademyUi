@@ -236,9 +236,9 @@ const Services = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <div className="relative w-full px-4 md:px-0">
+    <div className="relative w-full px-4 md:px-0 ">
       <div className="md:w-[65%] w-full mx-auto md:mx-0  md:ml-[14%] mb-14">
-        <h1 className="text-center py-20 font-bold text-3xl md:text-6xl text-[#5A5A5A] uppercase">Services by Us</h1>
+        <h1 className="text-center py-20 font-bold text-4xl md:text-6xl text-[#5A5A5A] uppercase">Services by Us</h1>
         <div className="bg-[#F6F8FA] py-14 px-8 rounded-lg shadow-md">
           <div className="w-full md:w-[70%] mx-auto md:mx-0">
             <h1 className="uppercase text-2xl md:text-3xl font-bold text-[#232E45] text-center md:text-left">

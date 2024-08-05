@@ -165,7 +165,7 @@ const Banner = () => {
   return (
     <>
     
-   <div className="bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41]">
+   <div className="bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41] w-full">
    <div className="bg-banner-bg   bg-cover bg-center h-auto w-full">
     <div className="md:w-[75%] w-full md:mx-auto pl-2 md:px-0 py-12">
       <div className="flex flex-col md:flex-row gap-8 md:gap-40">
@@ -176,7 +176,7 @@ const Banner = () => {
           </h1>
          
 
-          <h1 className="text-white text-3xl md:text-4xl  font-bold leading-tight">
+          <h1 className="text-white text-2xl md:text-4xl  font-bold leading-tight">
             TOP NOTCH ACADEMIC HELP BY
           </h1>
           <h1 className="text-white text-3xl md:text-4xl  font-bold leading-tight">
@@ -223,15 +223,15 @@ const Banner = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4 py-8 ">
-            <div className="bg-[#ffb800] w-[460px] md:w-[230px] h-10 flex justify-center rounded-md">
+          <div className="flex flex-col md:flex-row  gap-4 py-8 ">
+            <div className="bg-[#ffb800] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <BiMessageRoundedDots className="text-2xl md:text-3xl" color="white" />
                 <h1 className="text-white font-bold text-sm uppercase">TALK TO OUR EXPERT</h1>
               </div>
             </div>
 
-            <div className="bg-white w-[460px] md:w-[230px] h-10 flex justify-center rounded-md">
+            <div className="bg-white w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <IoLogoWhatsapp className="text-2xl md:text-3xl" color="#408955" />
                 <h1 className="text-[#408955] font-bold text-sm  uppercase">Whatsapp Now</h1>
@@ -239,16 +239,16 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap md:gap-4 gap-2 py-4">
-            <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
+          <div className="flex px-2 md:px-0 md:gap-4 gap-1 py-4">
+            <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-1 md:p-2 rounded-md border border-white">
               <div className="flex items-center justify-between h-full">
                 <div>
                   {/* <FcGoogle size={35} /> */}
-                  <img src={ukwriters} className="w-[35px] h-[35px]" alt="" />
+                  <img src={ukwriters} className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" alt="" />
                 </div>
                 <div className="flex flex-col items-start">
                   <div className="flex items-center gap-1">
-                    <h1 className="text-xl font-bold">4.9</h1>
+                    <h1 className="text-base font-bold">4.9</h1>
                     <div className="flex">
                       <IoStarSharp color="#E85F2A" />
                       <IoStarSharp color="#E85F2A" />
@@ -265,11 +265,11 @@ const Banner = () => {
             <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
               <div className="flex items-center justify-between h-full">
                 <div>
-                 <img src={trustpilot} alt="" className="w-[35px] h-[35px]" />
+                 <img src={trustpilot} alt="" className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" />
                 </div>
                 <div className="flex flex-col items-start">
                   <div className="flex items-center gap-1">
-                    <h1 className="text-xl font-bold ">4.8</h1>
+                    <h1 className="text-base font-bold ">4.8</h1>
                     <div className="flex">
                       <IoStarSharp color="#E85F2A" />
                       <IoStarSharp color="#E85F2A" />
@@ -287,11 +287,11 @@ const Banner = () => {
             <div className="bg-[#00000080]  w-[180px] md:h-[60px] h-[60px] p-2 rounded-md border border-white">
               <div className="flex items-center justify-between">
                 <div>
-                <img src={sitejabber} alt="" className="w-[35px] h-[35px]" />
+                <img src={sitejabber} alt="" className="w-[30px] h-[30px] md:w-[35px] md:h-[35px]" />
                 </div>
                 <div className="flex flex-col items-start">
                   <div className="flex items-center gap-1">
-                    <h1 className="text-xl font-bold">4.8</h1>
+                    <h1 className="text-base font-bold">4.8</h1>
                     <div className="flex">
                       <IoStarSharp color="#E85F2A" />
                       <IoStarSharp color="#E85F2A" />
