@@ -170,7 +170,7 @@ const Banner = () => {
     <div className="md:w-[75%] w-full md:mx-auto pl-2 md:px-0 py-12">
       <div className="flex flex-col md:flex-row gap-8 md:gap-40">
         {/* Left Container */}
-        <div className="text-white md:w-[55%]">
+        <div className="text-white  md:w-[55%]">
           <h1 className="text-[#ffb800] font-bold text-2xl md:text-2xl leading-tight">
             FREE AI Testing REPORT
           </h1>
@@ -224,14 +224,14 @@ const Banner = () => {
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row  gap-4 py-8 ">
-            <div className="bg-[#ffb800] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+            <div className="bg-[#ffb800] w-[300px] mx-auto md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <BiMessageRoundedDots className="text-2xl md:text-3xl" color="white" />
                 <h1 className="text-white font-bold text-sm uppercase">TALK TO OUR EXPERT</h1>
               </div>
             </div>
 
-            <div className="bg-white w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
+            <div className="bg-white w-[300px] mx-auto md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <IoLogoWhatsapp className="text-2xl md:text-3xl" color="#408955" />
                 <h1 className="text-[#408955] font-bold text-sm  uppercase">Whatsapp Now</h1>
@@ -239,7 +239,7 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="flex px-2 md:px-0 md:gap-4 gap-1 py-4">
+          <div className="flex flex-wrap px-2 md:px-0 md:gap-4 gap-1 py-4">
             <div className="bg-[#00000080] w-[180px] md:h-[60px] h-[60px] p-1 md:p-2 rounded-md border border-white">
               <div className="flex items-center justify-between h-full">
                 <div>
