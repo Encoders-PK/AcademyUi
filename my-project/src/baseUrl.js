@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:5000";
+const baseUrl = "https://academyui-1.onrender.com";
 
 // const backend_Url = "http://localhost:3000/"
 
