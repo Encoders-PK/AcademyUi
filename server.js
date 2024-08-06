@@ -242,9 +242,9 @@ app.post('/signup', async (req, res) => {
     const mailOptions = {
       from: process.env.SMPT_MAIL,
       to: 'engrsyedusamaakhtar@gmail.com',
-      subject: 'New User Signup Details',
+      subject: 'TA SIGNUP',
       text: `
-        A new user has signed up:
+        You have a signup on www.academians.co.uk
 
         Name: ${name}
         Email: ${email}
