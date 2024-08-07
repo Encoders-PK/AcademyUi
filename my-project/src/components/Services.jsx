@@ -161,15 +161,20 @@ import { FaCheck } from "react-icons/fa";
 
 const tabs = [
   {
-    name: "Homework",
+    name: "Assessment",
     content: {
-      heading: "Homework",
+      heading: "Uni Assessment Help",
       description:
-        "We understand your academic career will be filled with complex homework tasks, but don’t take stress to complete it efficiently.",
+        `Having a hard time with university examinations? Our professionals can help you change this
+around. We assist with relevant and valuable material according to the customer’s
+specification, Such as research services, writing services, and editing services. Our aim it to
+ensure that you achieve your objectives to the maximum and minimize the challenges in your
+education. Enjoy the power of an expert help, and you will be able to handle any task with ease.
+Uni Assessment Help is nearby; call us now for assistance and start attaining your dreams!`,
       bulletPoints: [
-        "More than 50 subjects covered",
-        "24-7 services available",
-        "Get unlimited revisions",
+        "100% Satisfaction Guaranteed",
+        "Pay Only If You Satisfied",
+        "Quality, and Low Cost",
       ],
       image: HomeworkImage,
     },
@@ -177,41 +182,65 @@ const tabs = [
   {
     name: "Assignment",
     content: {
-      heading: "Assignment",
+      heading: "Ace Your Assignment",
       description:
-        "Looking for a professional writer to deal with scientific research papers? Look, nowhere we are here to provide your best research paper writing.",
+        `The highly qualified team of our specialists makes efficient and effective effort and devotion to
+help you get the highest grades. In pursuit of our mission of providing reliable and quality
+learning materials, the tutors focus on offering proper explanation and filling the client in on
+research findings as well as offering the necessary guidance in writing and editing of papers to
+make them reflect the needed academic standard. Approach enables you to take your specific
+requirements into consideration, whether it is to explain difficult concepts, or enhance your
+efficiency in general. Recognise your strengths with Ace Your Assignment with Mum’s tailored
+approach and be the best you are able to be within your academic endeavours. Don’t wait any
+longer and get in touch with us to begin the process.`,
       bulletPoints: [
-        "On-time submission",
-        "Expert guidance",
-        "Custom solutions",
+        "Custom Solutions",
+        "Feedback on Paper and Email",
+        "Timely Assistance",
+        "24/7 Personalized Support",
+        "Native British Writer",
+        
       ],
       image: AssignmentImage,
     },
   },
   {
-    name: "Research Paper",
+    name: "Dissertation",
     content: {
-      heading: "Research Paper",
+      heading: "Dissertation Help",
       description:
-        "Looking for a professional writer to deal with scientific research papers? Look, nowhere we are here to provide your best research paper writing.",
+        `Here at our services, our dedicated team will provide you with the dissertation help you need
+to get the best results. If you need help with your dissertation we have extensive experience in
+Academic writing and assist with Research, Structure, and Edit for your dissertation papers. It is
+our goal to help you to avoid the pitfalls, presenting the entire process in a more controlled and
+encouraging way and delivering great results. Dissertation Help Service UK is here for making
+your academic journey easier and smoother let’s connect for the professional help now.`,
       bulletPoints: [
-        "On-time submission",
-        "Expert guidance",
-        "Custom solutions",
+        "dropping for Peace of Mind Guaranteed",
+        "Help From Expert Only In Some Cases",
+        "Rise in your Academic Decoration",
       ],
       image: ResearchImage,
     },
   },
   {
-    name: "Assignment Editing",
+    name: "Coursework",
     content: {
-      heading: "Assignment Editing",
+      heading: "Do My Coursework",
       description:
-        "Looking for a professional writer to deal with scientific research papers? Look, nowhere we are here to provide your best research paper writing.",
+        `Struggling with coursework? The members of our team of highly qualified specialists are ready
+to provide comprehensive support to the client at any stage of work. We are here to assist you
+in making sense of the information overload, improve your research and polish your skills. As
+such, the emphasis is made on tasks’ academic honesty and quality of output, as well as on the
+customer’s workload and performance enhancement. Looking for Coursework done by the
+best? Make your Coursework reflect the quality you deserve, call on Do My Coursework today!`,
       bulletPoints: [
-        "On-time submission",
-        "Expert guidance",
-        "Custom solutions",
+        "Custom Solutions",
+        "Feedback on Paper and Email",
+        "Timely Assistance",
+        "24/7 Personalized Support",
+        "Native British Writer",
+        "300+ Subjects Support",      
       ],
       image: AssignmentEditImage,
     },
@@ -219,13 +248,19 @@ const tabs = [
   {
     name: "Other",
     content: {
-      heading: "Research Paper",
+      heading: "Research Proposal/Online Exam",
       description:
-        "Looking for a professional writer to deal with scientific research papers? Look, nowhere we are here to provide your best research paper writing.",
+      `Stuck with your research paper or require help in online tests? Our professional staff provides
+services according to the requirements of the client. We offer help with research paper, with
+choosing the topic, research and writing the paper, and preparing for online tests to ace them.
+Thus, our aim is to help you get good grades through correctly organized and concise papers.
+We offer Research Papers Help and Online Exam Help; hence, feel free to contact us for quality
+assistance.`,
       bulletPoints: [
-        "On-time submission",
-        "Expert guidance",
-        "Custom solutions",
+        "On-Time Delivery",
+        "Expert Assistance Provided",
+        "Commitment to Excellence",
+        "Reliable and Professional",
       ],
       image: OtherImage,
     },
@@ -236,16 +271,16 @@ const Services = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <div className="relative w-full px-4 md:px-0 ">
+    <div className="relative w-full ">
       <div className="md:w-[65%] w-full mx-auto md:mx-0  md:ml-[14%] mb-14">
-        <h1 className="text-center py-20 font-bold text-4xl md:text-6xl text-[#5A5A5A] uppercase">Services by Us</h1>
+        <h1 className="text-center py-20 font-bold text-3xl md:text-6xl text-[#5A5A5A] uppercase">Services by Us</h1>
         <div className="bg-[#F6F8FA] py-14 px-8 rounded-lg shadow-md">
           <div className="w-full md:w-[70%] mx-auto md:mx-0">
-            <h1 className="uppercase text-2xl md:text-3xl font-bold text-[#232E45] text-center md:text-left">
+            <h1 className="uppercase text-xl md:text-3xl font-bold text-[#232E45] text-center md:text-left">
               What Our Experts Can Do
             </h1>
 
-            <div className="flex flex-wrap items-center gap-6 pt-6 pb-3 pl-2 justify-center md:justify-start">
+            <div className="flex flex-wrap items-center gap-2 md:gap-6 pt-6 pb-3 pl-2 justify-center md:justify-start">
               {tabs.map((tab) => (
                 <ul
                   key={tab.name}
@@ -290,7 +325,7 @@ const Services = () => {
 
         <img
           src={activeTab.content.image}
-          className="md:absolute hidden md:block top-60 right-4 md:right-20 w-[400px] h-auto md:w-auto"
+          className="md:absolute hidden md:block -bottom-5 right-4 md:right-20 w-[400px] h-auto md:w-auto"
           alt={activeTab.name}
         />
       </div>

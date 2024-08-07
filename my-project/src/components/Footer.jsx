@@ -102,7 +102,7 @@ import logo from "../assets/ta-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41] text-white py-8 md:py-20 w-full mt-12">
+    <footer className="bg-[#367285] text-white py-8 md:py-20 w-full mt-12">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between text-center md:text-left">
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
         <div className="flex justify-center"><img src={logo} className="w-[400px] h-auto -ml-8" alt="logoPic" /></div>

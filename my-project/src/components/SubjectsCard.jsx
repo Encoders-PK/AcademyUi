@@ -172,14 +172,14 @@ const SubjectsCard = () => {
     "Forestry",
     "Architecture",
     "Art & Design",
-    "Biological Sciences",
-    "Business Management",
+    
+    
     "Chemistry",
-    "Communication & Media",
+    
     "Economics",
     "Education",
     "Engineering",
-    "Environmental Science",
+    
     "History",
     "Law",
     "Literature",
@@ -203,7 +203,7 @@ const SubjectsCard = () => {
     "Geography",
     "Linguistics",
     "Public Health",
-    "Information Technology",
+    "Coding",
     "Botany",
     "Zoology",
     "Microbiology",
@@ -214,12 +214,10 @@ const SubjectsCard = () => {
     "Pharmacology",
     "Dentistry",
     "Optometry",
-    "Occupational Therapy",
     "Physical Therapy",
     "Radiology",
     "Neuroscience",
     "Criminology",
-    "International Relations",
     "Library Science",
     "Journalism",
     "Film Studies",
@@ -230,17 +228,9 @@ const SubjectsCard = () => {
   ];
   
 
-  // const icons = [
-  //   FaBook,
-  //   FaUniversity,
-  //   FaCalculator,
-  //   FaChalkboardTeacher,
-  //   MdCameraAlt,
-  //   MdScience,
-  // ];
 
   return (
-    <div className="w-full h-auto bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41] mb-16">
+    <div className="w-full h-auto bg-[#367285] mb-16">
       <div className="text-white text-center pt-16 pb-4">
         <h1 className="text-3xl md:text-6xl font-bold py-1">SUBJECTS WE COVERED</h1>
         <h2 className="text-lg md:text-2xl font-semibold py-1">We’ve Covered 650+ Subjects</h2>
@@ -254,7 +244,7 @@ const SubjectsCard = () => {
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-8 md:gap-4 w-[100%] sm:w-[80%] md:w-[94%]  mx-auto p-4 sm:p-8 md:p-12 lg:p-16">
         {subjects.map((subject, index) => {
         
-          const whatsappUrl = `https://wa.me/yourwhatsappnumber?text=I%20am%20interested%20in%20${subject}`;
+          const whatsappUrl = `https://wa.me/+447397145697?text=I%20am%20interested%20in%20${subject}`;
           return (
             <a key={index} href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <div className="bg-white rounded-lg shadow-lg flex items-center gap-1 p-1 cursor-pointer">

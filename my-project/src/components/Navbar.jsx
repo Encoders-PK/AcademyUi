@@ -60,7 +60,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41]  h-auto w-full lg:py-8 md:py-8 pt-8 md:pt-0 pb-8 md:pb-0 md:mt-8">
+    <div className="bg-[#367285]  h-auto w-full lg:py-8 md:py-8 pt-8 md:pt-0 pb-8 md:pb-0 md:mt-8">
       {/* main container */}
       <div className="flex items-center justify-between md:w-[80%] w-[95%] mx-2 md:mx-auto    text-white">
         <div className="text-2xl"><img src={logo} className="w-[360px] h-auto md:ml-0 -ml-8" alt="logoPic" /></div>
@@ -126,6 +126,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden  md:flex items-center gap-4">
+        <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
           <div className="bg-[#408955] w-[220px] h-[40px] flex px-2 rounded-md">
             <div className="flex items-center gap-1">
               <IoLogoWhatsapp className="text-3xl" />
@@ -134,6 +135,7 @@ const Navbar = () => {
               </h1>
             </div>
           </div>
+          </a>
 
           <div>
             <img src={Available} className="w-[170px] h-[68px]" alt="" />
@@ -147,7 +149,7 @@ const Navbar = () => {
           </div> */}
         </div>
 
-        <div className="md:hidden flex items-center ">
+        <div className="md:hidden flex items-center mx-auto ">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? (
               <TiTimes size={30} className="text-white" />
@@ -160,7 +162,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gradient-to-r from-[#142A41] via-[#1B7995] to-[#142A41] w-full text-white px-4 py-8 ">
+        <div className="md:hidden bg-[#367285] w-full text-white px-4 py-8 ">
           <Link to={'/'}>
           <div className="flex gap-2 items-center">
             <IoHome size={25} />
@@ -249,3 +251,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+

@@ -1,34 +1,3 @@
-// import mobileSection from "../assets/mobileSection.webp"
-// import phone from "../assets/phone.png"
-
-// const EasyToStart = () => {
-//   return (
-//     <div className="w-[75%] h-[680px] mx-auto my-6">
-//       <h1 className="text-[#5A5A5A] text-5xl text-center font-bold pb-10 py-2">
-//         EASY TO START
-//       </h1>
-
-//       {/* conatiner */}
-//       <div className="flex items-center gap-24 justify-center">
-//         {/* left Side */}
-//         <div className="">
-//             <img src={mobileSection} alt="" />
-        
-//         </div>
-
-//         {/* Right Side  */}
-
-//         <div className="">
-//             <img src={phone} className="w-[300px] h-[500px]" alt="" />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EasyToStart;
-
-
 import mobileSection from "../assets/mobileSection.webp";
 import phone from "../assets/phone.png";
 
