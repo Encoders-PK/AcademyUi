@@ -37,8 +37,8 @@ const App = () => {
           </Routes>
           <DiscountPopup/>
           <TawkMessengerReact
-            propertyId="62b99b88b0d10b6f3e79802d"
-            widgetId="1g6igf40l"
+            propertyId="601da070c31c9117cb7649b7"
+            widgetId="1etprlduf"
             // ref={tawkMessengerRef}
             onLoad={onLoad}
           />
