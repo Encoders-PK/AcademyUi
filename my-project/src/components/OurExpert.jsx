@@ -403,7 +403,7 @@ const OurExpert = () => {
         currentCardIndex === index ? "scale-105" : ""
       }`}
     >
-      <div className="py-8 px-8 text-white">
+      <div className="md:py-8 md:px-8 py-4 px-4 text-white">
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <div className="">
@@ -415,12 +415,17 @@ const OurExpert = () => {
             </div>
             <div className="flex flex-col">
               <h1 className="text-black font-semibold">{expert.name}</h1>
-              <div className="flex gap-2 items-center">
-                <HiMiniStar color="white" size={20} className="bg-[#60C955]" />
-                <HiMiniStar color="white" size={20} className="bg-[#60C955]" />
-                <HiMiniStar color="white" size={20} className="bg-[#60C955]" />
-                <HiMiniStar color="white" size={20} className="bg-[#60C955]" />
-                <HiMiniStar color="white" size={20} className="bg-[#60C955]" />
+              <div className="flex gap-1 md:gap-2 items-center">
+                {/* <HiMiniStar color="white" size={10} className="bg-[#60C955]" />
+                <HiMiniStar color="white" size={10} className="bg-[#60C955]" />
+                <HiMiniStar color="white" size={10} className="bg-[#60C955]" />
+                <HiMiniStar color="white" size={10} className="bg-[#60C955]" />
+                <HiMiniStar color="white" size={10} className="bg-[#60C955]" /> */}
+                <HiMiniStar className="bg-[#60C955] text-white md:text-2xl text-xs" />
+                <HiMiniStar className="bg-[#60C955] text-white md:text-2xl text-xs" />
+                <HiMiniStar className="bg-[#60C955] text-white md:text-2xl text-xs" />
+                <HiMiniStar className="bg-[#60C955] text-white md:text-2xl text-xs" />
+                <HiMiniStar className="bg-[#60C955] text-white md:text-2xl text-xs" />
               </div>
             </div>
           </div>
@@ -438,23 +443,28 @@ const OurExpert = () => {
         <div className="w-full h-[2px] bg-[#92979B] mt-12"></div>
         <div className="flex items-center gap-4 mt-4">
           <div className="text-black flex items-end gap-1">
-            <h1 className="font-bold text-base">{expert.completedOrders}</h1>
-            <span className="text-sm text-gray-400">orders completed</span>
+            <h1 className="font-bold text-[11px] md:text-base">{expert.completedOrders}</h1>
+            <span className="text-[10px] md:text-sm text-gray-400">orders completed</span>
           </div>
           <div className="text-black flex items-end gap-1">
-            <h1 className="font-bold text-[14px]">{expert.positiveReviwes}</h1>
-            <span className="text-sm text-gray-400">positive Reviews</span>
+            <h1 className="font-bold text-[11px] md:text-base">{expert.positiveReviwes}</h1>
+            <span className="text-[10px] md:text-sm text-gray-400">positive Reviews</span>
           </div>
         </div>
-        <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-        <div className="bg-[#408955] w-full h-10 flex justify-center rounded-md mt-8">
-          <div className="flex items-center gap-2">
-            <IoLogoWhatsapp className="text-2xl md:text-3xl" color="white" />
-            <h1 className="text-white font-semibold text-sm uppercase">
-              Click to Assign Expert
-            </h1>
+        <a
+          href="https://wa.me/447397145697"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex gap-2 items-center"
+        >
+          <div className="bg-[#408955] w-full h-10 flex justify-center rounded-md mt-8">
+            <div className="flex items-center gap-2">
+              <IoLogoWhatsapp className="text-2xl md:text-3xl" color="white" />
+              <h1 className="text-white font-semibold text-sm uppercase">
+                Click to Assign Expert
+              </h1>
+            </div>
           </div>
-        </div>
         </a>
       </div>
     </div>

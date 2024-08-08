@@ -97,13 +97,35 @@
 
 // export default Faq;
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import faq from "../assets/faq.png";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BiMessageRoundedDots } from "react-icons/bi";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  useEffect(() => {
+    // Adding Tawk.to script to the page when the component mounts
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/601da070c31c9117cb7649b7/1etprlduf"; // Your Tawk.to script source
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  }, []);
+
+  const handleTalkToExpertClick = () => {
+    if (window.Tawk_API && window.Tawk_API.maximize) {
+      window.Tawk_API.maximize();
+    } else {
+      console.error("Tawk.to is not initialized properly.");
+    }
+  };
 
   const faqs = [
     {
@@ -157,7 +179,8 @@ const Faq = () => {
         {/* Left Side */}
         <div className="w-full md:w-[35%] hidden md:block">
           <img src={faq} alt="FAQ Illustration" className="w-full h-auto" />
-          <div className="flex flex-col md:flex-row gap-4 py-8 ">
+          {/* <div className="flex flex-col md:flex-row gap-4 py-8 ">
+          <a href="https://tawk.to/chat/62b99b88b0d10b6f3e79802d/1g6igf40l" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
             <div className="bg-[#007285] w-[470px] md:w-[230px] h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <BiMessageRoundedDots
@@ -169,6 +192,7 @@ const Faq = () => {
                 </h1>
               </div>
             </div>
+            </a>
 
             <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
             <div className="bg-white w-full md:w-56 h-10 flex justify-center rounded-md border border-[#408955]">
@@ -182,6 +206,35 @@ const Faq = () => {
                 </h1>
               </div>
             </div>
+            </a>
+          </div> */}
+
+          <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
+            <button
+              onClick={handleTalkToExpertClick}
+              className="flex gap-2 items-center bg-[#007285] w-full md:w-[230px] h-10 justify-center rounded-md"
+            >
+              <BiMessageRoundedDots
+                className="text-2xl md:text-3xl"
+                color="white"
+              />
+              <h1 className="text-white font-bold text-sm md:text-base">
+                TALK TO OUR EXPERT
+              </h1>
+            </button>
+
+            <a
+              href="https://wa.me/447397145697"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              <div className="bg-white w-full md:w-[230px] h-10 flex items-center justify-center rounded-md border border-[#408955]">
+                <IoLogoWhatsapp className="text-2xl text-[#408955]" />
+                <h1 className="text-[#408955] font-bold text-sm md:text-base uppercase">
+                  Whatsapp Now
+                </h1>
+              </div>
             </a>
           </div>
         </div>

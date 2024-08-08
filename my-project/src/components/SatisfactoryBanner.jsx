@@ -30,15 +30,16 @@ const SatisfactoryBanner = () => {
                 Assignment 
               </span>
               <span className="custom-underline inline-block mx-1 md:mx-2">
-                Dsesertation
+                Dissertation
               </span>
-              <span className=" custom-underline inline-block ml-12 md:mx-2">
+              <span className=" custom-underline inline-block mr-2 ml-12 md:mx-2">
                 Coursework
               </span>
           
-              <span className="custom-underline inline-block mx-4 md:mx-14 pt-4">
+              <span className="custom-underline inline-block mx-1 md:mx-14 pt-4">
                 Online Exams
               </span>
+              
             </h1>
           </div>
 

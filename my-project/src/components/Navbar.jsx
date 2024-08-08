@@ -63,7 +63,7 @@ const Navbar = () => {
     <div className="bg-[#367285]  h-auto w-full lg:py-8 md:py-8 pt-8 md:pt-0 pb-8 md:pb-0 md:mt-8">
       {/* main container */}
       <div className="flex items-center justify-between md:w-[80%] w-[95%] mx-2 md:mx-auto    text-white">
-        <div className="text-2xl"><img src={logo} className="w-[360px] h-auto md:ml-0 -ml-8" alt="logoPic" /></div>
+        <Link to={"/"}><div className="text-2xl"><img src={logo} className="w-[360px] h-auto md:ml-0 -ml-8" alt="logoPic" /></div></Link>
 
         <div className="hidden md:flex gap-6">
           <Link to={"/"}>
@@ -196,7 +196,7 @@ const Navbar = () => {
               </div>
             </div>
             {isDropdownOpen && (
-              <div className="bg-[#007285] border border-[#ffffff7a] w-[220px] text-white rounded-md shadow-lg mt-2">
+              <div className="bg-[#007285] border border-[#ffffff7a] w-[220px] text-white rounded-md shadow-lg mt-2 mb-4">
                 <ul>
                   <li className="p-2 hover:bg-gray-100 hover:rounded-md hover:text-blue-300 hover:font-bold  cursor-pointer">
                     Assignment Help
@@ -235,15 +235,16 @@ const Navbar = () => {
           </h1>
           </div>
 
-          <div className="flex items-center gap-4 -mb-14">
-            
-           <div className="bg-[#408955] w-1/2 px-2 py-2 flex justify-center rounded-md">
+          
+          <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
+           <div className="bg-[#408955] w-[60%] px-2 py-2 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <IoLogoWhatsapp className="text-3xl" />
                 <h1 className="text-white uppercase font-bold">50% discount</h1>
               </div>
             </div>
-          </div>
+            </a>
+          
         </div>
       )}
     </div>

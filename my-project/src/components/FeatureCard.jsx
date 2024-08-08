@@ -266,7 +266,7 @@ we can assist you in achieving your academic goals.`,
           >
             <div className="flex justify-center items-center gap-4">
               {/* Icon */}
-              <div className="bg-green-600 h-16 w-16 rounded-full p-4 flex items-center justify-center">
+              <div className="bg-green-600 h-16 w-16 rounded-full p-4 flex items-center justify-center mb-4">
                 {feature.icon}
               </div>
               {/* Horizontal line for medium screens */}

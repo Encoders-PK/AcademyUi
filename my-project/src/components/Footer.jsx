@@ -112,9 +112,10 @@ const Footer = () => {
          
           <h1 className='mt-4 font-bold'>Our Social Media Links</h1>
           <div className='flex items-center justify-center md:justify-start gap-2 mt-2'>
-          <div><img src={facebook} className='w-8 h-8' alt="" /></div>
-         <div><img src={instagram} className='w-8 h-8' alt="" /></div>
-          <div><img src={whatsapp} className='w-8 h-8' alt="" /></div>
+            <a href="https://www.facebook.com/theacademiansexperts" target='_blank' rel="noopener noreferrer"> <div><img src={facebook} className='w-8 h-8' alt="" /></div></a>
+            <a href="https://www.instagram.com/theacademiansexperts/" target='_blank' rel="noopener noreferrer"> <div><img src={instagram} className='w-8 h-8' alt="" /></div></a>
+            <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer"><div><img src={whatsapp} className='w-8 h-8' alt="" /></div></a>
+            
 
           </div>
         </div>

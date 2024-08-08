@@ -16,6 +16,7 @@ import FooterBanner from '../components/FooterBanner'
 import StickyPopup from '../components/StickyPopup'
 import GetDiscount from '../components/GetDiscount'
 import OurExpert from '../components/OurExpert'
+import StickyBtn from '../components/StickyBtn'
 // import StickyBtn from '../components/StickyBtn'
 
 const HomePage = () => {
@@ -40,7 +41,7 @@ const HomePage = () => {
       <Footer/>
       <StickyPopup/>
       <FooterBanner/>
-      {/* <StickyBtn/> */}
+      <StickyBtn/>
     </div>
   )
 }

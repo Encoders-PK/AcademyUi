@@ -311,12 +311,14 @@ const Services = () => {
             </div>
 
             {/* Button */}
+            <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
             <div className="bg-[#408955] w-full md:w-[230px] h-10 flex justify-center shadow-md rounded-md mt-14 mx-auto md:mx-0">
               <div className="flex items-center gap-2">
                 <IoLogoWhatsapp className="text-2xl md:text-3xl" color="white" />
                 <h1 className="text-white font-bold text-sm uppercase">talk to our expert</h1>
               </div>
             </div>
+            </a>
             <div>
               <h1 className="text-sm text-center md:text-left px-8 py-2">It’s <b>100%</b> Confidentials</h1>
             </div>

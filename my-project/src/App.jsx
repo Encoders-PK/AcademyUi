@@ -5,9 +5,26 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import ReviewPage from "./Pages/ReviewPage";
 import ThankYou from "./Pages/ThankYou";
+import  TawkMessengerReact  from '@tawk.to/tawk-messenger-react';
+import { useRef } from "react";
+import DiscountPopup from "./components/DiscountPopup";
 const App = () => {
+
+
+  const tawkMessengerRef = useRef();
+
+  const handleMinimize = () => {
+    if (tawkMessengerRef.current) {
+      tawkMessengerRef.current.minimize();
+    }
+  };
+  const onLoad = () => {
+    console.log('onLoad works!');
+};
   return (
     <div>
+
+        
       <Router>
         <div>
           <Routes>
@@ -18,6 +35,15 @@ const App = () => {
             <Route path="/thankyou" element={<ThankYou />} />
 
           </Routes>
+          <DiscountPopup/>
+          <TawkMessengerReact
+            propertyId="62b99b88b0d10b6f3e79802d"
+            widgetId="1g6igf40l"
+            // ref={tawkMessengerRef}
+            onLoad={onLoad}
+          />
+            <button className="minimize-button hidden" onClick={handleMinimize}></button>
+
         </div>
       </Router>
     </div>

@@ -75,16 +75,40 @@
 import aboutPic from "../assets/aboutPic.png";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BiMessageRoundedDots } from "react-icons/bi";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    // Adding Tawk.to script to the page when the component mounts
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/601da070c31c9117cb7649b7/1etprlduf"; // Your Tawk.to script source
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  }, []);
+
+  const handleTalkToExpertClick = () => {
+    if (window.Tawk_API && window.Tawk_API.maximize) {
+      window.Tawk_API.maximize();
+    } else {
+      console.error("Tawk.to is not initialized properly.");
+    }
+  };
   return (
     <div className="md:w-[75%] w-full mx-auto mt-12 md:py-12  px-4">
       {/* container */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         {/* left side */}
         <div className="w-full md:w-1/2">
-          <h1 className="text-xl md:text-3xl font-bold px-2 text-[#5A5A5A] md:leading-tight">
-            Expert <span className="text-[#F1B815]">Assignment Assistance</span>{" "}
+          <h1 className="text-xl md:text-3xl font-bold px-1 md:px-2 text-[#5A5A5A] md:leading-tight">
+            Expert <span className="text-[#F1B815]">Assignment Assistance</span>
+            <br />
             Tailored Support for Your Academic Success
           </h1>
           {/* <h1 className="text-xl md:text-3xl font-bold px-2 text-[#5A5A5A] md:leading-tight">
@@ -105,7 +129,8 @@ const About = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4 py-8">
+          {/* <div className="flex flex-col md:flex-row gap-4 py-8">
+          <a href="https://tawk.to/chat/62b99b88b0d10b6f3e79802d/1g6igf40l" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
             <div className="bg-[#ffb800] w-full md:w-56 h-10 flex justify-center rounded-md">
               <div className="flex items-center gap-2">
                 <BiMessageRoundedDots
@@ -117,6 +142,7 @@ const About = () => {
                 </h1>
               </div>
             </div>
+            </a>
 
             <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
             <div className="bg-white w-full md:w-56 h-10 flex justify-center rounded-md border border-[#408955]">
@@ -130,6 +156,35 @@ const About = () => {
                 </h1>
               </div>
             </div>
+            </a>
+          </div> */}
+
+          <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
+            <button
+              onClick={handleTalkToExpertClick}
+              className="flex gap-2 items-center bg-[#ffb800] w-full md:w-[230px] h-10 justify-center rounded-md"
+            >
+              <BiMessageRoundedDots
+                className="text-2xl md:text-3xl"
+                color="white"
+              />
+              <h1 className="text-white font-bold text-sm md:text-base">
+                TALK TO OUR EXPERT
+              </h1>
+            </button>
+
+            <a
+              href="https://wa.me/447397145697"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              <div className="bg-white w-full md:w-[230px] h-10 flex items-center justify-center rounded-md border border-[#408955]">
+                <IoLogoWhatsapp className="text-2xl text-[#408955]" />
+                <h1 className="text-[#408955] font-bold text-sm md:text-base uppercase">
+                  Whatsapp Now
+                </h1>
+              </div>
             </a>
           </div>
         </div>

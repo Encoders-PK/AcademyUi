@@ -12,7 +12,7 @@ const GetDiscount = () => {
             <input
               className="border-2 border-[#F1B815] outline-none p-2 w-full md:w-[300px] h-auto rounded-md focus:border-blue-500"
               type="text"
-              placeholder="Enter your e-mail"
+              placeholder="Enter your phone No"
             />
           </div>
           <button className="uppercase bg-[#F1B815] p-3 rounded-md font-semibold">Get a discount</button>
