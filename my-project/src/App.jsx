@@ -1,13 +1,20 @@
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import About from "./components/About";
-import ContactUs from "./components/ContactUs";
 import ReviewPage from "./Pages/ReviewPage";
 import ThankYou from "./Pages/ThankYou";
 import  TawkMessengerReact  from '@tawk.to/tawk-messenger-react';
 import { useRef } from "react";
 import DiscountPopup from "./components/DiscountPopup";
+import AssignmentHelp from "./Pages/AssignmentHelp";
+import EssayHelp from "./Pages/EssayHelp";
+import CourseWorkHelp from "./Pages/CourseWorkHelp";
+import OnlineExamHelp from "./Pages/OnlineExamHelp";
+import DissertationHelp from "./Pages/DissertationHelp";
+import ResearchProposal from "./Pages/ResearchProposal";
+import AssignmentExpert from "./Pages/AssignmentExpert";
+import Assignment from "./Pages/Assignment";
+import AssesmentHelp from "./Pages/AssesmentHelp";
+
 const App = () => {
 
 
@@ -29,10 +36,24 @@ const App = () => {
         <div>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/about-us" element={<HomePage />} />
+    
+            <Route path="/contact-us" element={<HomePage />} />
             <Route path="/review" element={<ReviewPage />} />
             <Route path="/thankyou" element={<ThankYou />} />
+            <Route path="/assignment-help" element={<AssignmentHelp />} />
+            <Route path="/essay-help" element={<EssayHelp />} />
+            <Route path="/coursework-help" element={<CourseWorkHelp />} />
+            <Route path="/exam-help" element={<OnlineExamHelp />} />
+            <Route path="/dissertation-help" element={<DissertationHelp />} />
+            <Route path="/research-proposal" element={<ResearchProposal />} />
+            <Route path="/assignment-expert" element={<AssignmentExpert />} />
+            <Route path="/assignment" element={<Assignment />} />
+            <Route path="/assessment-help" element={<AssesmentHelp/>} />
+
+
+
+           
 
           </Routes>
           <DiscountPopup/>

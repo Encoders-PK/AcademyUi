@@ -275,7 +275,7 @@ const Services = () => {
       <div className="md:w-[65%] w-full mx-auto md:mx-0  md:ml-[14%] mb-14">
         <h1 className="text-center py-20 font-bold text-3xl md:text-6xl text-[#5A5A5A] uppercase">Services by Us</h1>
         <div className="bg-[#F6F8FA] py-14 px-8 rounded-lg shadow-md">
-          <div className="w-full md:w-[70%] mx-auto md:mx-0">
+          <div className="w-full md:w-[70%] lg:h-[700px] md:h-[690px] h-auto mx-auto md:mx-0">
             <h1 className="uppercase text-xl md:text-3xl font-bold text-[#232E45] text-center md:text-left">
               What Our Experts Can Do
             </h1>
@@ -320,14 +320,14 @@ const Services = () => {
             </div>
             </a>
             <div>
-              <h1 className="text-sm text-center md:text-left px-8 py-2">It’s <b>100%</b> Confidentials</h1>
+              <h1 className="text-sm text-center md:text-left px-8 py-2">It’s <b>100%</b> Confidential</h1>
             </div>
           </div>
         </div>
 
         <img
           src={activeTab.content.image}
-          className="md:absolute hidden md:block -bottom-5 right-4 md:right-20 w-[400px] h-auto md:w-auto"
+          className="md:absolute hidden md:block -bottom-0 right-4 md:right-20 w-[400px] h-auto md:w-auto"
           alt={activeTab.name}
         />
       </div>

@@ -72,12 +72,13 @@
 
 // export default About;
 
-import aboutPic from "../assets/aboutPic.png";
+import aboutPic from '../assets/aboutPic.webp';
 import { IoLogoWhatsapp } from "react-icons/io";
-import { BiMessageRoundedDots } from "react-icons/bi";
-import { useEffect } from "react";
+import { BiMessageRoundedDots }  from "react-icons/bi";
+import { useEffect} from "react";
 
-const About = () => {
+const About = ({aboutRef}) => {
+  
   useEffect(() => {
     // Adding Tawk.to script to the page when the component mounts
     var Tawk_API = Tawk_API || {},
@@ -101,7 +102,7 @@ const About = () => {
     }
   };
   return (
-    <div className="md:w-[75%] w-full mx-auto mt-12 md:py-12  px-4">
+    <div className="md:w-[75%] w-full mx-auto mt-12 md:py-12  px-4"  ref={aboutRef} id="about">
       {/* container */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         {/* left side */}

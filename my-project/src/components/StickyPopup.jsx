@@ -275,7 +275,7 @@ const StickyPopup = () => {
       id: 1,
       content: (
         <>
-          <img src={maleStd} className="w-[70px] h-[75px]" alt="Student" />
+          <img src={maleStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
           <div>
             <h2 className="text-sm font-semibold">George Harrison</h2>
             <p className="mt-1 text-[12px] text-gray-700">
@@ -296,7 +296,7 @@ const StickyPopup = () => {
       id: 2,
       content: (
         <>
-          <img src={maleStd} className="w-[70px] h-[75px]" alt="Student" />
+          <img src={maleStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
           <div>
             <h2 className="text-sm font-semibold">James Whitaker</h2>
             <p className="mt-1 text-[12px] text-gray-700">
@@ -317,7 +317,7 @@ const StickyPopup = () => {
       id: 3,
       content: (
         <>
-          <img src={womenStd} className="w-[70px] h-[75px]" alt="Student" />
+          <img src={womenStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
           <div>
             <h2 className="text-sm font-semibold">Siobhan O'Connor</h2>
             <p className="mt-1 text-[12px] text-gray-700">
@@ -339,7 +339,7 @@ const StickyPopup = () => {
       id: 4,
       content: (
         <>
-          <img src={maleStd} className="w-[70px] h-[75px]" alt="Student" />
+          <img src={maleStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
           <div>
             <h2 className="text-sm font-semibold">Ethan Clarke</h2>
             <p className="mt-1 text-[12px] text-gray-700">
@@ -360,7 +360,7 @@ const StickyPopup = () => {
       id: 5,
       content: (
         <>
-          <img src={womenStd} className="w-[70px] h-[75px]" alt="Student" />
+          <img src={womenStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
           <div>
             <h2 className="text-sm font-semibold">Amelia Hart</h2>
             <p className="mt-1 text-[12px] text-gray-700">
@@ -381,7 +381,7 @@ const StickyPopup = () => {
       id: 6,
       content: (
         <>
-          <img src={womenStd} className="w-[70px] h-[75px]" alt="Student" />
+          <img src={womenStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
           <div>
             <h2 className="text-sm font-semibold">Eleanor Brooks</h2>
             <p className="mt-1 text-[12px] text-gray-700">
@@ -417,7 +417,7 @@ const StickyPopup = () => {
             </button>
           </div>
 
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center justify-between gap-2">
             {popups[popupIndex].content}
           </div>
         </div>

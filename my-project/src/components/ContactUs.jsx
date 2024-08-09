@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import baseUrl from "../baseUrl";
 
-const ContactUs = () => {
+const ContactUs = ({contactRef}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
@@ -65,7 +65,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full md:w-[75%] h-auto md:my-24 contact-section mx-auto mt-12 px-4">
+    <div className="w-full md:w-[75%] h-auto md:my-24 contact-section mx-auto mt-12 px-4" ref={contactRef} id="contact-us" >
       <h1 className="text-[#5A5A5A] text-3xl md:text-5xl text-center font-bold mb-2 md:mb-12">
         CONTACT US
       </h1>
@@ -178,7 +178,7 @@ const ContactUs = () => {
                   onChange={(e) => setPhoneNo(e.target.value)}
                 />
 
-                <button className="w-full md:w-auto h-12 text-[#16334F] font-bold bg-white flex items-center justify-center mt-4 rounded-md" type="submit">
+                <button className="w-full md:w-auto h-12 text-[#16334F] font-bold bg-white flex items-center justify-center mt-4 rounded-md uppercase" type="submit">
                   Submit
                 </button>
               </div>

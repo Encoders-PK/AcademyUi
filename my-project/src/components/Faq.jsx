@@ -170,7 +170,7 @@ const Faq = () => {
       <div className="text-center pb-12">
         <h1 className="text-3xl md:text-6xl font-bold text-[#5A5A5A]">FAQ</h1>
         <h2 className="text-xl md:text-2xl text-[#5A5A5A] pt-4 px-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Frequently Ask Questions
         </h2>
       </div>
 
@@ -212,13 +212,13 @@ const Faq = () => {
           <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
             <button
               onClick={handleTalkToExpertClick}
-              className="flex gap-2 items-center bg-[#007285] w-full md:w-[230px] h-10 justify-center rounded-md"
+              className="flex gap-2 lg:gap-1 items-center bg-[#007285] w-full md:w-[230px]  h-10 justify-center rounded-md"
             >
               <BiMessageRoundedDots
-                className="text-2xl md:text-3xl"
+                className="text-2xl md:text-3xl lg:text-2xl"
                 color="white"
               />
-              <h1 className="text-white font-bold text-sm md:text-base">
+              <h1 className="text-white font-bold text-sm md:text-base lg:text-sm">
                 TALK TO OUR EXPERT
               </h1>
             </button>

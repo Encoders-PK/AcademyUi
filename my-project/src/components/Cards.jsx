@@ -1,4 +1,3 @@
-import { SlBadge } from "react-icons/sl";
 import icon1 from "../assets/icon1.png";
 import icon2 from "../assets/icon2.png";
 import icon3 from "../assets/icon3.png";
@@ -12,7 +11,7 @@ const Cards = () => {
       <h1 className="upppercase text-center text-3xl md:text-6xl font-bold py-10 text-[#5A5A5A] flex justify-center uppercase">
         Why Choose Us
       </h1>
-      <div className="flex flex-wrap gap-4 justify-center p-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-0 md:gap-10">
         {/* card one */}
         <div className="w-full sm:w-[46%] md:w-[48%] lg:w-[370px]  h-auto bg-[#007285] shadow-2xl mb-4 rounded-xl">
           <div className="py-12 px-8 text-white">
@@ -63,7 +62,7 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4 justify-center p-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-0 md:gap-10">
         {/* card one */}
         <div className="w-full sm:w-[46%] md:w-[48%] lg:w-[370px]  h-auto  bg-[#007285] shadow-2xl mb-4 rounded-xl">
           <div className="py-12 px-8 text-white">

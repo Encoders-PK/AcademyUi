@@ -2,6 +2,7 @@ import  { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";  
 import baseUrl from "../baseUrl.js";
+import formPic from '../assets/formPic.png'
 
 const DiscountPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,15 +59,16 @@ const DiscountPopup = () => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-[#367285] p-8 rounded-lg text-white relative w-80">
+      <div className="bg-[#367285] px-6 pt-4 pb-8 rounded-lg text-white relative md:w-[450px] w-88">
         <button
           className="absolute top-4 right-4 text-2xl font-bold"
           onClick={closePopup}
         >
           ×
         </button>
-        <h2 className="text-2xl mb-2">50% DISCOUNT</h2>
-        <p className="text-lg mb-4">ON FIRST ORDER</p>
+       <div className='mb-2'> <img src={formPic} className='md:w-[400px] w-full' alt="" /></div>
+        {/* <h2 className="text-2xl mb-2">50% DISCOUNT</h2>
+        <p className="text-lg mb-4">ON FIRST ORDER</p> */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
             type="text"

@@ -17,17 +17,21 @@ import StickyPopup from '../components/StickyPopup'
 import GetDiscount from '../components/GetDiscount'
 import OurExpert from '../components/OurExpert'
 import StickyBtn from '../components/StickyBtn'
+import { useRef } from 'react'
 // import StickyBtn from '../components/StickyBtn'
 
+
 const HomePage = () => {
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
   return (
     <div>
       {/* <Slider/> */}
       <Head/>
-      <Navbar/>
+      <Navbar aboutRef={aboutRef} contactRef={contactRef}/>
       <StickyButtons/>
       <Banner/>
-      <About/>
+      <About aboutRef={aboutRef}/>
       <Services/>
       <OurExpert/>
       <RecentReviews/>
@@ -37,8 +41,8 @@ const HomePage = () => {
       <DiscountBanner/>
       <Faq />
       <GetDiscount/>
-      <ContactUs />
-      <Footer/>
+      <ContactUs contactRef={contactRef} />
+      <Footer aboutRef={aboutRef} contactRef={contactRef}/>
       <StickyPopup/>
       <FooterBanner/>
       <StickyBtn/>

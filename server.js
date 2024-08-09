@@ -196,6 +196,7 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 const User = require('./models/User.js');
+const PhoneLead = require('./models/PhoneLead.js'); 
 const sequelize = require('./config/database.js');
 
 dotenv.config();
@@ -266,6 +267,29 @@ app.post('/signup', async (req, res) => {
   } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ message: 'Error creating user or sending email' });
+  }
+});
+
+app.post('/phonelead', async (req, res) => {
+  try {
+    const { number } = req.body;
+
+    // Debugging: Log the request body
+    console.log('Request body:', req.body);
+
+    // Validate request data
+    if (!number) {
+      console.log('Missing fields:', { number });
+      return res.status(400).json({ message: 'Missing required fields' });
+    }
+
+    // Create a new phone lead in the database
+    const newPhoneLead = await PhoneLead.create({ number });
+
+    res.status(201).json({ message: 'Phone lead created successfully!', phoneLead: newPhoneLead });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ message: 'Error creating phone lead' });
   }
 });
 
