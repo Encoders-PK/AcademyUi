@@ -17,16 +17,26 @@ import StickyPopup from '../components/StickyPopup'
 import GetDiscount from '../components/GetDiscount'
 import OurExpert from '../components/OurExpert'
 import StickyBtn from '../components/StickyBtn'
-import { useRef } from 'react'
-// import StickyBtn from '../components/StickyBtn'
+import { useEffect, useRef } from 'react'
+import { useLocation } from "react-router-dom";
+
 
 
 const HomePage = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/about-us" && aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.pathname === "/contact-us" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
   return (
     <div>
-      {/* <Slider/> */}
       <Head/>
       <Navbar aboutRef={aboutRef} contactRef={contactRef}/>
       <StickyButtons/>

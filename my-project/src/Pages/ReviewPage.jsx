@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import ReviewBanner from "../components/ReviewBanner";
 import ReviewCards from "../components/ReviewCards";
 import StickyButtons from "../components/StickyButtons";
+import StickyBtn from "../components/StickyBtn";
 
 
 const ReviewPage = () => {
@@ -18,9 +19,9 @@ const ReviewPage = () => {
       <ReviewBanner/>
       <ReviewCards/>
       <StickyButtons/>
-      <Footer />
+      <Footer  aboutRef={aboutRef} contactRef={contactRef} />
       <FooterBanner/>
-       
+      <StickyBtn/>
     </div>
   );
 };

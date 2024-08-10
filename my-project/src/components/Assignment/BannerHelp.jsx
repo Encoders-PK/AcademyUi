@@ -44,7 +44,7 @@ const BannerHelp = () => {
               <h1 className="text-[#ffb800] font-bold text-xl md:text-2xl">
               Quality Help at Low Cost
               </h1>
-              <h1 className="text-white text-xl md:text-4xl font-bold">
+              <h1 className="text-white text-2xl md:text-4xl font-bold">
               Relax, We’ll Take Care of Your Assignments
               </h1>
 
@@ -93,34 +93,6 @@ const BannerHelp = () => {
                   </h1>
                 </div>
               </div>
-
-              {/* Buttons */}
-              {/* <div className="flex flex-col md:flex-row gap-4 py-8">
-              
-               
-              <a href="https://tawk.to/chat/62b99b88b0d10b6f3e79802d/1g6igf40l" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-               <div className="bg-[#ffb800] w-full md:w-56 h-10 flex justify-center rounded-md">
-                  <div className="flex items-center gap-2">
-                    <BiMessageRoundedDots className="text-2xl md:text-3xl" color="white" />
-                    <h1 className="text-white font-bold text-sm uppercase">TALK TO OUR EXPERT</h1>
-                  </div>
-                </div>
-                </a>
-              
-
-
-
-     
-
-                <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-                <div className="bg-white w-full md:w-56 h-10 flex justify-center rounded-md">
-                  <div className="flex items-center gap-2">
-                    <IoLogoWhatsapp className="text-2xl md:text-3xl" color="#408955" />
-                    <h1 className="text-[#408955] font-bold text-sm uppercase">Whatsapp Now</h1>
-                  </div>
-                </div>
-                </a>
-              </div> */}
 
               <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
                 <button

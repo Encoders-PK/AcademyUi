@@ -1,4 +1,3 @@
-
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BiMessageRoundedDots } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import baseUrl from "../baseUrl";
 
-const ContactUs = ({contactRef}) => {
+const ContactUs = ({ contactRef }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
@@ -34,10 +33,10 @@ const ContactUs = ({contactRef}) => {
         console.log(res);
         navigate("/thankyou");
       } else {
-        console.error('Error:', res);
+        console.error("Error:", res);
       }
     } catch (err) {
-      console.error('Error:', err);
+      console.error("Error:", err);
     }
   };
 
@@ -65,13 +64,17 @@ const ContactUs = ({contactRef}) => {
   };
 
   return (
-    <div className="w-full md:w-[75%] h-auto md:my-24 contact-section mx-auto mt-12 px-4" ref={contactRef} id="contact-us" >
+    <div
+      className="w-full md:w-[75%] h-auto md:my-24 contact-section mx-auto mt-12 px-4"
+      ref={contactRef}
+      id="contact-us"
+    >
       <h1 className="text-[#5A5A5A] text-3xl md:text-5xl text-center font-bold mb-2 md:mb-12">
         CONTACT US
       </h1>
 
       {/* container */}
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 justify-center">
+      <div className="flex flex-col md:flex-row items-center gap-2 md:gap-16 justify-center">
         {/* Left Side */}
         <div className="w-full md:w-1/2 py-8 md:py-0 text-center md:text-left">
           <h1 className="text-[#333333] text-2xl md:text-3xl font-bold mb-4 md:mb-6">
@@ -89,7 +92,7 @@ const ContactUs = ({contactRef}) => {
             success.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
+          <div className="flex flex-col md:flex-row gap-3 py-8 w-full md:w-auto">
             <button
               onClick={handleTalkToExpertClick}
               className="flex gap-2 items-center bg-[#007285] w-full md:w-[230px] h-10 justify-center rounded-md"
@@ -104,12 +107,14 @@ const ContactUs = ({contactRef}) => {
             </button>
 
             <a
-              href="https://wa.me/447397145697"
+              href={`https://wa.me/447397145697?text=${encodeURIComponent(
+                "Hello Team Academians, I want to avail my promo code TA-OFF50."
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex gap-2 items-center"
+              
             >
-              <div className="bg-white w-full md:w-[230px] h-10 flex items-center justify-center rounded-md border border-[#408955]">
+              <div className="bg-white w-full md:w-[230px] h-10 flex items-center gap-2 justify-center rounded-md border border-[#408955]">
                 <IoLogoWhatsapp className="text-2xl text-[#408955]" />
                 <h1 className="text-[#408955] font-bold text-sm md:text-base uppercase">
                   Whatsapp Now
@@ -145,7 +150,7 @@ const ContactUs = ({contactRef}) => {
         </div>
 
         {/* Right Side */}
-        <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+        <div className="w-full md:w-1/2 flex justify-center ">
           <div className="bg-[#007285] w-full md:w-[450px] rounded-2xl p-6 md:p-8">
             <h1 className="text-white text-xl md:text-2xl font-bold mb-4">
               Our team is available 24/7 <br /> to provide you the best
@@ -178,7 +183,10 @@ const ContactUs = ({contactRef}) => {
                   onChange={(e) => setPhoneNo(e.target.value)}
                 />
 
-                <button className="w-full md:w-auto h-12 text-[#16334F] font-bold bg-white flex items-center justify-center mt-4 rounded-md uppercase" type="submit">
+                <button
+                  className="w-full md:w-auto h-12 text-[#16334F] font-bold bg-white flex items-center justify-center mt-4 rounded-md uppercase"
+                  type="submit"
+                >
                   Submit
                 </button>
               </div>
@@ -191,5 +199,3 @@ const ContactUs = ({contactRef}) => {
 };
 
 export default ContactUs;
-
-

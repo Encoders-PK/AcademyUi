@@ -7,8 +7,8 @@ import icon6 from "../assets/icon6.png";
 
 const Cards = () => {
   return (
-    <div className="w-[90%] md:w-[75%] h-auto mx-auto mt-8">
-      <h1 className="upppercase text-center text-3xl md:text-6xl font-bold py-10 text-[#5A5A5A] flex justify-center uppercase">
+    <div className="w-[90%] md:w-[75%] h-auto mx-auto mt-0 md:mt-8">
+      <h1 className="upppercase text-center text-3xl md:text-6xl font-bold py-6 md:py-10 text-[#5A5A5A] flex justify-center uppercase">
         Why Choose Us
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 md:px-0 md:gap-10">
@@ -68,7 +68,7 @@ const Cards = () => {
           <div className="py-12 px-8 text-white">
             <img src={icon4} className="mx-auto w-[80px]" alt="" />
             <h1 className="text-xl pt-3 font-bold text-center">
-              Choose from 90+ subjects
+              Choose from 150+ subjects
             </h1>
             <p className="text-sm py-1 mt-2 text-center">
               Still, you can select from over 150+ subjects to get professional

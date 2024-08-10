@@ -126,7 +126,7 @@ const SignUp = () => {
               <div className="flex items-center justify-center gap-4 relative mt-4">
                 <button 
                   type="submit"
-                  className="pr-3 md:text-sm  text-[12px] rounded-l-lg bg-[#007285] text-white w-[140px] md:w-[160px] h-[40px] md:h-[50px]"
+                  className="pr-3 md:text-sm  text-[12px] font-bold rounded-l-lg bg-[#007285] text-white w-[140px] md:w-[160px] h-[40px] md:h-[50px]"
                 >
                   APPLY DISCOUNT
                 </button>
@@ -134,8 +134,10 @@ const SignUp = () => {
                   OR
                 </span>
                
-                <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-                <div className="pl-6 py-3 md:pl-6 md:py-4 bg-[#408955] md:text-sm  text-[12px] rounded-r-lg text-white w-[140px] md:w-[160px] h-[40px] md:h-[50px] ">
+                <a href={`https://wa.me/447397145697?text=${encodeURIComponent(
+                "Hello Team Academians, I want to avail my promo code TA-OFF50."
+              )}`} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
+                <div className="pl-6 py-3 md:pl-6 md:py-4 bg-[#408955] md:text-sm  text-[12px] font-bold rounded-r-lg text-white w-[140px] md:w-[160px] h-[40px] md:h-[50px] ">
                   WHATSAPP NOW
                 </div>
                 </a>
