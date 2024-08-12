@@ -256,7 +256,7 @@ const RecentReviews = () => {
 
         <button
           onClick={handleNext}
-          className="absolute right-4 md:right-[8%] bg-white rounded-full p-2"
+          className="absolute right-4 md:right-[6%] bg-white rounded-full p-2"
         >
           <FaArrowRight color="#020621" />
         </button>

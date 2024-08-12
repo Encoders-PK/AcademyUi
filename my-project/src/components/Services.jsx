@@ -12,13 +12,7 @@ const tabs = [
     name: "Assessment",
     content: {
       heading: "Uni Assessment Help",
-      description:
-        `Having a hard time with university examinations? Our professionals can help you change this
-around. We assist with relevant and valuable material according to the customer’s
-specification, Such as research services, writing services, and editing services. Our aim it to
-ensure that you achieve your objectives to the maximum and minimize the challenges in your
-education. Enjoy the power of an expert help, and you will be able to handle any task with ease.
-Uni Assessment Help is nearby; call us now for assistance and start attaining your dreams!`,
+      description: `Struggling with university assessments? Our experts are here to help. We provide tailored research, writing, and editing services to ensure you reach your academic goals. Our mission is to help you succeed with ease. Contact Uni Assessment Help today and start achieving your dreams!`,
       bulletPoints: [
         "100% Satisfaction Guaranteed",
         "Pay Only If You Satisfied",
@@ -31,23 +25,13 @@ Uni Assessment Help is nearby; call us now for assistance and start attaining yo
     name: "Assignment",
     content: {
       heading: "Ace Your Assignment",
-      description:
-        `The highly qualified team of our specialists makes efficient and effective effort and devotion to
-help you get the highest grades. In pursuit of our mission of providing reliable and quality
-learning materials, the tutors focus on offering proper explanation and filling the client in on
-research findings as well as offering the necessary guidance in writing and editing of papers to
-make them reflect the needed academic standard. Approach enables you to take your specific
-requirements into consideration, whether it is to explain difficult concepts, or enhance your
-efficiency in general. Recognise your strengths with Ace Your Assignment with Mum’s tailored
-approach and be the best you are able to be within your academic endeavours. Don’t wait any
-longer and get in touch with us to begin the process.`,
+      description: `Our expert team is dedicated to helping you achieve top grades through efficient and effective support. We provide reliable, high-quality expert help, offering clear explanations, research insights, and guidance in writing and editing to meet academic standards. Our tailored approach considers your specific needs, whether clarifying complex concepts or improving overall efficiency. Recognize your strengths with Ace Your Assignment and excel in your academic pursuits. Contact us today to start your journey.`,
       bulletPoints: [
         "Custom Solutions",
         "Feedback on Paper and Email",
         "Timely Assistance",
         "24/7 Personalized Support",
         "Native British Writer",
-        
       ],
       image: AssignmentImage,
     },
@@ -56,13 +40,7 @@ longer and get in touch with us to begin the process.`,
     name: "Dissertation",
     content: {
       heading: "Dissertation Help",
-      description:
-        `Here at our services, our dedicated team will provide you with the dissertation help you need
-to get the best results. If you need help with your dissertation we have extensive experience in
-Academic writing and assist with Research, Structure, and Edit for your dissertation papers. It is
-our goal to help you to avoid the pitfalls, presenting the entire process in a more controlled and
-encouraging way and delivering great results. Dissertation Help Service UK is here for making
-your academic journey easier and smoother let’s connect for the professional help now.`,
+      description: `Our team provides the dissertation help you need for top results. With expertise in academic help, we assist with research, structure, and editing. We aim to simplify the process and deliver excellent results. Let Dissertation Help Service UK make your academic journey smoother. Connect with us today`,
       bulletPoints: [
         "dropping for Peace of Mind Guaranteed",
         "Help From Expert Only In Some Cases",
@@ -75,20 +53,14 @@ your academic journey easier and smoother let’s connect for the professional h
     name: "Coursework",
     content: {
       heading: "Do My Coursework",
-      description:
-        `Struggling with coursework? The members of our team of highly qualified specialists are ready
-to provide comprehensive support to the client at any stage of work. We are here to assist you
-in making sense of the information overload, improve your research and polish your skills. As
-such, the emphasis is made on tasks’ academic honesty and quality of output, as well as on the
-customer’s workload and performance enhancement. Looking for Coursework done by the
-best? Make your Coursework reflect the quality you deserve, call on Do My Coursework today!`,
+      description: `Struggling with coursework? Our team of highly qualified specialists is ready to support you at any stage. We help you navigate information overload, improve research, and refine your skills. We prioritize academic honesty, quality, and enhancing your performance. Want the best coursework? Reflect the quality you deserve with Do My Coursework today`,
       bulletPoints: [
         "Custom Solutions",
         "Feedback on Paper and Email",
         "Timely Assistance",
         "24/7 Personalized Support",
         "Native British Writer",
-        "300+ Subjects Support",      
+        "300+ Subjects Support",
       ],
       image: AssignmentEditImage,
     },
@@ -97,13 +69,7 @@ best? Make your Coursework reflect the quality you deserve, call on Do My Course
     name: "Other",
     content: {
       heading: "Research Proposal/Online Exam",
-      description:
-      `Stuck with your research paper or require help in online tests? Our professional staff provides
-services according to the requirements of the client. We offer help with research paper, with
-choosing the topic, research and writing the paper, and preparing for online tests to ace them.
-Thus, our aim is to help you get good grades through correctly organized and concise papers.
-We offer Research Papers Help and Online Exam Help; hence, feel free to contact us for quality
-assistance.`,
+      description: `Struggling with a research paper or need help with online exams? Our professional team offers tailored support to meet your needs. We assist with topic selection, research, writing, and test preparation to help you excel. Our goal is to ensure well-organized papers and strong results. Contact us for expert Research Paper and Online Exam Help today.`,
       bulletPoints: [
         "On-Time Delivery",
         "Expert Assistance Provided",
@@ -121,9 +87,11 @@ const Services = () => {
   return (
     <div className="relative w-full ">
       <div className="md:w-[65%] w-full mx-auto md:mx-0  md:ml-[14%] mb-14">
-        <h1 className="text-center pb-6 mb:pb-0 md:pt-0 pt-2 md:py-20 font-bold text-3xl md:text-6xl text-[#5A5A5A] uppercase">Services by Us</h1>
+        <h1 className="text-center pb-6 mb:pb-0 md:pt-0 pt-2 md:py-20 font-bold text-3xl md:text-6xl text-[#5A5A5A] uppercase">
+          Services by Us
+        </h1>
         <div className="bg-[#F6F8FA] py-14 px-8 rounded-lg shadow-md">
-          <div className="w-full md:w-[70%] lg:h-[700px] md:h-[690px] h-auto mx-auto md:mx-0">
+          <div className="w-full md:w-[70%] lg:h-[720px]  h-auto mx-auto md:mx-0">
             <h1 className="uppercase text-xl md:text-3xl font-bold text-[#232E45] text-center md:text-left">
               What Our Experts Can Do
             </h1>
@@ -145,12 +113,17 @@ const Services = () => {
             </div>
             <div className="border-b border-black mb-6"></div>
 
-            <div className="text-center md:text-left">
-              <h1 className="py-7 font-bold text-xl md:text-2xl">{activeTab.content.heading}</h1>
-              <p className="pb-7">{activeTab.content.description}</p>
-              <ul className="list-none pl-0">
+            <div className="text-center md:text-left md:w-[88%] w-full">
+              <h1 className="py-7 font-bold text-xl md:text-2xl">
+                {activeTab.content.heading}
+              </h1>
+              <p className="pb-7 text-sm">{activeTab.content.description}</p>
+              <ul className="list-none pl-0 ">
                 {activeTab.content.bulletPoints.map((point, index) => (
-                  <li key={index} className="flex items-center gap-2 justify-center md:justify-start">
+                  <li
+                    key={index}
+                    className="flex items-center text-sm gap-2 justify-center md:justify-start"
+                  >
                     <FaCheck className="text-green-500" />
                     {point}
                   </li>
@@ -159,25 +132,37 @@ const Services = () => {
             </div>
 
             {/* Button */}
-            <a href={`https://wa.me/447397145697?text=${encodeURIComponent(
+            <a
+              href={`https://wa.me/447397145697?text=${encodeURIComponent(
                 "Hello Team Academians, I want to avail my promo code TA-OFF50."
-              )}`} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-            <div className="bg-[#408955] w-full md:w-[230px] h-10 flex justify-center shadow-md rounded-md mt-14 mx-auto md:mx-0">
-              <div className="flex items-center gap-2">
-                <IoLogoWhatsapp className="text-2xl md:text-3xl" color="white" />
-                <h1 className="text-white font-bold text-sm uppercase">talk to our expert</h1>
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              <div className="bg-[#408955] w-full md:w-[230px] h-10 flex justify-center shadow-md rounded-md mt-12 mx-auto md:mx-0">
+                <div className="flex items-center gap-2">
+                  <IoLogoWhatsapp
+                    className="text-2xl md:text-3xl"
+                    color="white"
+                  />
+                  <h1 className="text-white font-bold text-sm uppercase">
+                    talk to our expert
+                  </h1>
+                </div>
               </div>
-            </div>
             </a>
             <div>
-              <h1 className="text-sm text-center md:text-left px-8 py-2">It’s <b>100%</b> Confidential</h1>
+              <h1 className="text-sm text-center md:text-left px-8 py-2">
+                It’s <b>100%</b> Confidential
+              </h1>
             </div>
           </div>
         </div>
 
         <img
           src={activeTab.content.image}
-          className="md:absolute hidden md:block -bottom-0 right-4 md:right-20 w-[400px] h-auto md:w-auto"
+          className="md:absolute hidden md:block -bottom-0 right-0 md:right-20 w-[400px] h-auto md:w-auto"
           alt={activeTab.name}
         />
       </div>
@@ -186,5 +171,3 @@ const Services = () => {
 };
 
 export default Services;
-
-

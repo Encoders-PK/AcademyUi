@@ -114,7 +114,7 @@ const Banner = () => {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 items-center"
+                 
                 >
                   <div className="bg-white w-full md:w-[230px] h-10 flex gap-2 items-center justify-center rounded-md">
                     <IoLogoWhatsapp className="text-2xl text-[#408955]" />

@@ -76,7 +76,7 @@ const ContactUs = ({ contactRef }) => {
       {/* container */}
       <div className="flex flex-col md:flex-row items-center gap-2 md:gap-16 justify-center">
         {/* Left Side */}
-        <div className="w-full md:w-1/2 py-8 md:py-0 text-center md:text-left">
+        <div className="w-full md:w-[60%] py-8 md:py-0 text-center md:text-left ">
           <h1 className="text-[#333333] text-2xl md:text-3xl font-bold mb-4 md:mb-6">
             One Stop Solution to All <br /> Academic Worries
           </h1>

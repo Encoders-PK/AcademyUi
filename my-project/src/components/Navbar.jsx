@@ -60,7 +60,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
   return (
     <div className="bg-[#367285] h-auto w-full lg:py-8 md:py-8 pt-8 md:pt-0 pb-8 md:pb-0 md:mt-8">
       {/* Main container */}
-      <div className="flex items-center justify-between md:w-[80%] w-[95%] mx-2 md:mx-auto text-white ">
+      <div className="flex items-center justify-evenly md:w-[90%] w-[95%] mx-2 md:mx-auto text-white ">
         <Link to={"/"}>
           <div className="text-2xl">
             <img
@@ -71,7 +71,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
           </div>
         </Link>
 
-        <div className="hidden md:flex gap-6">
+        <div className="hidden md:flex gap-4">
           <Link to={"/"}>
             <h1 className="font-bold">Home</h1>
           </Link>
@@ -167,7 +167,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex gap-2 items-center"
+           
           >
             <div className="bg-[#408955] w-[220px] h-[40px] flex px-2 rounded-md">
               <div className="flex items-center gap-1">
@@ -238,7 +238,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
                   <li className="p-2 hover:bg-gray-100 hover:rounded-md hover:text-blue-300 hover:font-bold cursor-pointer">
                     <NavLink
                       to="/assignment-help"
-                      className={({ isActive }) => isActive ? "text-blu400 font-bold00 font-bold" : ""}
+                      className={({ isActive }) => isActive ? "text-blue-400 font-bold00 font-bold" : ""}
                     >
                       Assignment Help
                     </NavLink>

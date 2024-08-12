@@ -25,8 +25,9 @@ const Footer = ({ aboutRef, contactRef }) => {
 
   return (
     <footer className="bg-[#367285] text-white py-8 md:py-20 w-full mt-12">
+      <div className="w-[80%] mx-auto">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between text-center md:text-left">
-        <div className="w-full md:w-1/4 mb-8 md:mb-0">
+        <div className="w-full md:w-1/4 mb-8 md:mb-0 ">
           <div className="flex justify-center items-center">
             <div>
               <a
@@ -35,7 +36,7 @@ const Footer = ({ aboutRef, contactRef }) => {
               >
                 <img
                   src={logo}
-                  className="w-[400px] h-auto -ml-8"
+                  className="w-[400px] h-auto "
                   alt="logoPic"
                 />
               </a>
@@ -87,7 +88,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 Home
               </a>
@@ -95,7 +96,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToSection("/about-us", aboutRef)}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 About
               </a>
@@ -103,7 +104,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToSection("/contact-us", contactRef)}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 Contact Us
               </a>
@@ -111,20 +112,20 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/review")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 Reviews
               </a>
             </li>
           </ul>
         </div>
-        <div className="w-full lg:w-1/6 md:w-1/5 mb-8 md:mb-0">
+        <div className="w-full lg:w-1/5 md:w-1/4 mb-4 md:mb-0">
           <h3 className="text-lg md:text-xl font-bold">Services</h3>
           <ul className="mt-4 space-y-2 md:space-y-1 list-none md:list-disc list-inside">
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/assignment-help")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 Assignment Help
               </a>
@@ -132,7 +133,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/essay-help")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 Essay Help
               </a>
@@ -140,7 +141,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/coursework-help")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 CourseWork Help
               </a>
@@ -148,7 +149,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/exam-help")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underle"
               >
                 Online Exam Help
               </a>
@@ -156,7 +157,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/dissertation-help")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
                 Dissertation Help
               </a>
@@ -164,15 +165,15 @@ const Footer = ({ aboutRef, contactRef }) => {
             <li>
               <a
                 onClick={() => scrollToTopAndNavigate("/research-proposal")}
-                className="cursor-pointer hover:underline font-bold"
+                className="cursor-pointer hover:underline "
               >
-                Research Proposal Help
+                Research Help
               </a>
             </li>
           </ul>
         </div>
         <div className="w-full md:w-1/5">
-          <h3 className="text-lg md:text-xl font-bold mb-2">Secure Payment</h3>
+          <h3 className="text-lg md:text-xl font-bold mb-3">Secure Payment</h3>
           <div className="flex flex-col justify-center items-center">
             <div className="mb-4">
               <img
@@ -190,6 +191,7 @@ const Footer = ({ aboutRef, contactRef }) => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );

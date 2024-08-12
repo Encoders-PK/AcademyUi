@@ -72,13 +72,15 @@ const Faq = () => {
       </div>
 
       {/* Container */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-20">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Left Side */}
-        <div className="w-full md:w-[35%] hidden md:block">
-          <img src={faq} alt="FAQ Illustration" className="w-full h-auto" />
+        <div className="w-full md:w-[40%] hidden md:block ">
+         <div className="flex justify-center items-center">
+         <img src={faq} alt="FAQ Illustration" className="w-[400px]  h-auto" />
+         </div>
           
 
-          <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
+          <div className="flex flex-col md:flex-row gap-4 justify-center py-8 w-full md:w-auto">
             <button
               onClick={handleTalkToExpertClick}
               className="flex gap-2 lg:gap-1 items-center bg-[#007285] w-full md:w-[230px]  h-10 justify-center rounded-md"
@@ -111,7 +113,7 @@ const Faq = () => {
         </div>
 
         {/* Right Side */}
-        <div className="w-full md:w-[45%] px-4 md:px-8">
+        <div className="w-full md:w-[50%] px-4 md:px-8">
           <div className="bg-[#007285] text-white rounded-lg shadow-md p-4">
             {faqs.map((faq, index) => (
               <FAQItem
