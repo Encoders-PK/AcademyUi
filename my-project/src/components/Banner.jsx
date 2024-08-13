@@ -49,46 +49,45 @@ const Banner = () => {
 
               <img src={featureline} alt="Feature line" className="mt-2" />
 
-              <p className="whitespace-pre-wrap py-6 text-sm md:text-base lg:text-lg">
+              <p className="whitespace-pre-wrap py-6 text-sm md:text-base lg:text-lg font-semibold">
                 Team Tutoring providing top quality academic assistance to help
-                <br />
                 students succeed in their academic career
               </p>
 
               <div className="flex flex-wrap gap-4 py-4">
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg">
+                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
                     24/7 Free Support
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg">
+                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
                     Best Price
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg">
+                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
                     100% Money Back Guarantee
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg">
+                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
                     Top Quality Work
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg">
+                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
                     Plagiarism Free
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg">
+                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
                     On time Deliver
                   </h1>
                 </div>
@@ -114,7 +113,6 @@ const Banner = () => {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                 
                 >
                   <div className="bg-white w-full md:w-[230px] h-10 flex gap-2 items-center justify-center rounded-md">
                     <IoLogoWhatsapp className="text-2xl text-[#408955]" />

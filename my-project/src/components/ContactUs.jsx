@@ -153,7 +153,7 @@ const ContactUs = ({ contactRef }) => {
         <div className="w-full md:w-1/2 flex justify-center ">
           <div className="bg-[#007285] w-full md:w-[450px] rounded-2xl p-6 md:p-8">
             <h1 className="text-white text-xl md:text-2xl font-bold mb-4">
-              Our team is available 24/7 <br /> to provide you the best
+              Our team is available 24/7 to provide you the best
               assistance
             </h1>
             <form onSubmit={handleSubmit}>

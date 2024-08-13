@@ -19,7 +19,7 @@ const Head = () => {
             <div className="flex gap-2 items-center text-white">
               <a href="tel:+441618189341" className="flex gap-2 items-center">
                 <IoCall color="white" size={20} className="text-3xl" />
-                <h1 className="text-sm">Call us: +44 161 818 9341</h1>
+                <h1 className=" font-bold text-base">+44 161 818 9341</h1>
               </a>
             </div>
 
@@ -28,14 +28,14 @@ const Head = () => {
                 "Hello Team Academians, I want to avail my promo code TA-OFF50."
               )}`} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
                 <IoLogoWhatsapp color="white" size={20} className="text-3xl" />
-                <h1 className="text-sm text-white">Connect On Whatsapp: +44 739 714 5697</h1>
+                <h1 className=" text-white font-bold text-base">+44 739 714 5697</h1>
               </a>
             </div>
 
             <div className="flex gap-2 items-center">
               <a href="mailto:info@academians.co.uk" className="flex gap-2 items-center">
                 <CgMail color="white" size={20} className="text-3xl" />
-                <h1 className="text-sm text-white">Email us: info@academians.co.uk</h1>
+                <h1 className=" text-white font-bold text-base">info@academians.co.uk</h1>
               </a>
             </div>
           </div>
