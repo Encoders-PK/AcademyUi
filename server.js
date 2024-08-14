@@ -147,7 +147,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://dev.encoders.com.pk",
+  origin: "http://dev-enc.online",
   credentials: true,
 }));
 
