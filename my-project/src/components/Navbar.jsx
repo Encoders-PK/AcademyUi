@@ -58,7 +58,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
   }, []);
 
   return (
-    <div className="bg-[#367285] h-auto w-full lg:py-8 md:py-8 pt-8 md:pt-0 pb-8 md:pb-0 md:mt-8">
+    <div className="bg-[#367285] h-auto w-full lg:py-8 md:py-8 pt-8 md:pt-0 pb-4 md:pb-8 md:pb-0 md:mt-8">
       {/* Main container */}
       <div className="flex items-center justify-evenly md:w-[90%] w-[95%] mx-2 md:mx-auto text-white ">
         <Link to={"/"}>

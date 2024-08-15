@@ -39,6 +39,10 @@ const ThankYou = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate(path);
   };
+  useEffect(() => {
+      
+    document.title = 'Thankyou - Academians UK'; // Set the document title
+}, []);
 
   return (
     <>

@@ -35,6 +35,10 @@ const HomePage = () => {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
+  useEffect(() => {
+      
+    document.title = 'UK Top Ranked Academic Helpers - Academians'; // Set the document title
+}, []);
   return (
     <div>
       <Head/>

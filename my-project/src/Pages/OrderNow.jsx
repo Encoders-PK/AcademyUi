@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Head from "../components/Head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,6 +7,10 @@ import FooterBanner from "../components/FooterBanner";
 const OrderNow = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  useEffect(() => {
+      
+    document.title = 'Order Now - Academians UK'; // Set the document title
+}, []);
   return (
     <>
       <Head />

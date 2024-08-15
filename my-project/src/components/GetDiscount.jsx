@@ -21,6 +21,7 @@ const GetDiscount = () => {
          
           setPhoneNo('');
            navigate("/thankyou");
+           window.scrollTo(0, 0);
       } else {
         console.error('Error:', res);
       }

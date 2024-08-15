@@ -260,6 +260,7 @@ const SignUp = () => {
         setPhoneNo("");
         console.log(res);
         navigate("/thankyou");
+        window.scrollTo(0, 0);
       } else {
         console.error("Error:", res);
       }
@@ -286,7 +287,7 @@ const SignUp = () => {
               <div className="text-[#7279AE] font-bold text-[14px] sm:text-[16px]">
                 Order Now & Avail
               </div>
-              <div className="text-[#ffb800] text-3xl sm:text-4xl md:text-6xl font-bold animate-blink">
+              <div className="text-[#ffb800] text-5xl md:text-6xl font-bold animate-blink">
                 50% OFF
               </div>
             </div>
@@ -327,9 +328,9 @@ const SignUp = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="pr-3 text-xs sm:text-sm font-bold rounded-l-lg bg-[#007285] text-white w-[45%] sm:w-[140px] md:w-[160px] h-[40px] md:h-[50px] flex-shrink-0"
+                className="pr-3 text-[12px] sm:text-sm font-bold rounded-l-lg bg-[#007285] text-white w-[45%] sm:w-[140px] md:w-[160px] h-[40px] md:h-[50px] flex-shrink-0"
               >
-                {loading ? "Please Wait..." : "APPLY DISCOUNT"}
+                {loading ? "Applying Discount.." : "APPLY DISCOUNT"}
               </button>
               <span className="text-center font-semibold text-base absolute -top-1 py-3 lg:py-4 md:py-4 rounded-[50%] bg-white w-12 h-12 md:w-12 md:h-14">
                 OR
@@ -340,7 +341,7 @@ const SignUp = () => {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs pl-6 py-3 md:pl-6 md:py-4 sm:text-sm font-bold rounded-r-lg bg-[#408955] text-white w-[45%] sm:w-[140px] md:w-[160px] h-[40px] md:h-[50px] flex-shrink-0"
+                className="text-[12px] pl-5 py-3 md:pl-6 md:py-4 sm:text-sm font-bold rounded-r-lg bg-[#408955] text-white w-[45%] sm:w-[140px] md:w-[160px] h-[40px] md:h-[50px] flex-shrink-0"
               >
                 WHATSAPP NOW
               </a>

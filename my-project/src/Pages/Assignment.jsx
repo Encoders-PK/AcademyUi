@@ -16,11 +16,15 @@ import StickyPopup from '../components/StickyPopup'
 import GetDiscount from '../components/GetDiscount'
 import OurExpert from '../components/OurExpert'
 import StickyBtn from '../components/StickyBtn'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import AssignmentHelpBanner from '../components/Assignment/BannerHelp'
 const Assignment = () => {
     const aboutRef = useRef(null);
     const contactRef = useRef(null);
+    useEffect(() => {
+      
+      document.title = 'Assignment -Academians UK'; // Set the document title
+  }, []);
   return (
     <div>
        <Head/>

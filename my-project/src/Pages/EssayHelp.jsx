@@ -15,12 +15,16 @@ import StickyPopup from '../components/StickyPopup'
 import GetDiscount from '../components/GetDiscount'
 import OurExpert from '../components/OurExpert'
 import StickyBtn from '../components/StickyBtn'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import AboutHelp from '../components/EssayHelp/AboutHelp'
 import EssayHelpBanner from '../components/EssayHelp/EssayHelpBanner'
 const EssayHelp = () => {
     const aboutRef = useRef(null);
     const contactRef = useRef(null);
+    useEffect(() => {
+      
+      document.title = 'Essay Help - Academians UK'; // Set the document title
+  }, []);
   return (
     <div>
        <Head/>

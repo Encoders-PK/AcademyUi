@@ -34,6 +34,7 @@ const ContactUs = ({ contactRef }) => {
         setPhoneNo("");
         console.log(res);
         navigate("/thankyou");
+        window.scrollTo(0, 0);
       } else {
         console.error("Error:", res);
       }

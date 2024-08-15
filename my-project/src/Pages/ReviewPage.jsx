@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Footer from "../components/Footer";
 import FooterBanner from "../components/FooterBanner";
 import Head from "../components/Head";
@@ -12,6 +12,10 @@ import StickyBtn from "../components/StickyBtn";
 const ReviewPage = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  useEffect(() => {
+      
+    document.title = 'Review - Academians UK'; // Set the document title
+}, []);
   return (
     <div>
       <Head />
