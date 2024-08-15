@@ -147,7 +147,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors({
-  origin: "http://dev-enc.online",
+  origin: "http://localhost:5173",
   credentials: true,
 }));
 
@@ -271,6 +271,13 @@ app.get('/', (req, res) => res.send('HRM System API'));
 
 // Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
+
+
+
+
+
 
 
 

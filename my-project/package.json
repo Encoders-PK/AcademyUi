@@ -1,7 +1,7 @@
 {
   "name": "my-project",
+  "homepage": "https://dev-enc.online/",
   "private": true,
-  "homepage": "http://dev-enc.online/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -9,10 +9,12 @@ const ContactUs = ({ contactRef }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
+  const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const data = { name, email, phoneNo };
 
@@ -38,6 +40,10 @@ const ContactUs = ({ contactRef }) => {
     } catch (err) {
       console.error("Error:", err);
     }
+    finally{
+      setLoading(false);
+    }
+    
   };
 
   useEffect(() => {
@@ -123,30 +129,7 @@ const ContactUs = ({ contactRef }) => {
             </a>
           </div>
 
-          {/* <div className="flex flex-col md:flex-row gap-4">
-          <a href="https://tawk.to/chat/62b99b88b0d10b6f3e79802d/1g6igf40l" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-            <div className="bg-[#007285] w-full md:w-[230px] h-10 flex justify-center items-center rounded-md">
-              <div className="flex items-center gap-2">
-                <BiMessageRoundedDots className="text-2xl md:text-3xl" color="white" />
-                <h1 className="text-white font-bold text-sm md:text-base">TALK TO OUR EXPERT</h1>
-              </div>
-            </div>
-            </a>
-
-            <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-            <div className="bg-white w-full md:w-56 h-10 flex justify-center rounded-md border border-[#408955]">
-              <div className="flex items-center gap-2">
-                <IoLogoWhatsapp
-                  className="text-2xl md:text-3xl"
-                  color="#408955"
-                />
-                <h1 className="text-[#408955] font-bold text-sm uppercase">
-                  Whatsapp Now
-                </h1>
-              </div>
-            </div>
-            </a>
-          </div> */}
+        
         </div>
 
         {/* Right Side */}
@@ -186,8 +169,9 @@ const ContactUs = ({ contactRef }) => {
                 <button
                   className="w-full md:w-auto h-12 text-[#16334F] font-bold bg-white flex items-center justify-center mt-4 rounded-md uppercase"
                   type="submit"
+                  disabled={loading}
                 >
-                  Submit
+                  {loading ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>

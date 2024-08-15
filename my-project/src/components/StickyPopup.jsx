@@ -37,7 +37,8 @@ const StickyPopup = () => {
           <div>
             <h2 className="text-sm font-semibold">George Harrison</h2>
             <p className="mt-1 text-[12px] text-gray-700">
-              Student Of Imperial College London<br /> Achieved 85% in their final project thanks to the exceptional support.
+              Student Of University of Bolton
+              <br /> Got 90% Marks in Their Last Semester Project
             </p>
             <div className="flex mt-1">
               <IoStarSharp color="#E85F2A" />
@@ -58,7 +59,9 @@ const StickyPopup = () => {
           <div>
             <h2 className="text-sm font-semibold">James Whitaker</h2>
             <p className="mt-1 text-[12px] text-gray-700">
-            Student Of University of Manchester<br /> Secured 90% on their major paper with the help of this top-notch service.
+              Student Of University of london
+              <br />
+              Got 87% Marks in Their Monthly Assignment
             </p>
             <div className="flex mt-1">
               <IoStarSharp color="#E85F2A" />
@@ -75,11 +78,17 @@ const StickyPopup = () => {
       id: 3,
       content: (
         <>
-          <img src={womenStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
+          <img
+            src={womenStd}
+            className="w-[70px] h-[75px] pl-4"
+            alt="Student"
+          />
           <div>
             <h2 className="text-sm font-semibold">Siobhan O'Connor</h2>
             <p className="mt-1 text-[12px] text-gray-700">
-              Student from University of Bristol <br />Earned a stellar 92% on their dissertation, thanks to the expert assistance received.
+            Student Of Cranfield University
+             <br />
+             Got 79% Marks in Their Mid Term Exams
             </p>
             <div className="flex mt-1">
               <IoStarSharp color="#E85F2A" />
@@ -101,7 +110,9 @@ const StickyPopup = () => {
           <div>
             <h2 className="text-sm font-semibold">Ethan Clarke</h2>
             <p className="mt-1 text-[12px] text-gray-700">
-            Student from University of Edinburgh <br />Received a remarkable 88% in their coursework with outstanding help from this team.
+            Student Of King's College London
+           <br />
+           Got 90% Marks in Their Final Year Project
             </p>
             <div className="flex mt-1">
               <IoStarSharp color="#E85F2A" />
@@ -118,11 +129,16 @@ const StickyPopup = () => {
       id: 5,
       content: (
         <>
-          <img src={womenStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
+          <img
+            src={womenStd}
+            className="w-[70px] h-[75px] pl-4"
+            alt="Student"
+          />
           <div>
             <h2 className="text-sm font-semibold">Amelia Hart</h2>
             <p className="mt-1 text-[12px] text-gray-700">
-              Student from University of Glasgow <br /> Got 90% Marks in Their Mid Term Exams
+              Student from University of Glasgow <br /> Got 90% Marks in Their
+              Mid Term Exams
             </p>
             <div className="flex mt-1">
               <IoStarSharp color="#E85F2A" />
@@ -139,11 +155,16 @@ const StickyPopup = () => {
       id: 6,
       content: (
         <>
-          <img src={womenStd} className="w-[70px] h-[75px] pl-4" alt="Student" />
+          <img
+            src={womenStd}
+            className="w-[70px] h-[75px] pl-4"
+            alt="Student"
+          />
           <div>
             <h2 className="text-sm font-semibold">Eleanor Brooks</h2>
             <p className="mt-1 text-[12px] text-gray-700">
-            Student at University of Leeds <br />Achieved a remarkable 91% on their research paper, thanks to the expert support provided.
+              Student at University of Leeds <br />
+              Got 90% Marks in Their Mid Term Exams
             </p>
             <div className="flex mt-1">
               <IoStarSharp color="#E85F2A" />
@@ -162,9 +183,7 @@ const StickyPopup = () => {
     <>
       {isPopupVisible && !isClosed && (
         <div
-          className={`fixed bottom-2 hidden md:block left-2 w-[300px] h-[125px] bg-[#F3F3F3] shadow-lg  rounded-tr-[30%] rounded-bl-[30%] border-gray-200 z-50 transition-transform transform ${
-            animation
-          }`}
+          className={`fixed bottom-2 hidden md:block left-2 w-[260px] h-[125px] bg-[#F3F3F3] shadow-lg  rounded-tr-[30%] rounded-bl-[30%] border-gray-200 z-50 transition-transform transform ${animation}`}
         >
           <div className="py-2">
             <button
@@ -185,7 +204,3 @@ const StickyPopup = () => {
 };
 
 export default StickyPopup;
-
-
-
-

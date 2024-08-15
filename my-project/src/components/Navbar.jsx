@@ -81,7 +81,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
           </a>
 
           <div
-            className="relative flex items-center gap-2"
+            className="relative flex items-center gap-1"
             onClick={toggleDropdown}
             ref={serviceRef}
           >
@@ -90,7 +90,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
                 isDropdownOpen ? "text-white" : ""
               }`}
             >
-              Service
+              Services
             </h1>
             <TiArrowSortedDown size={15} />
             {isDropdownOpen && (
@@ -224,7 +224,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
                     isDropdownOpen ? "text-white" : ""
                   }`}
                 >
-                  Service
+                  Services
                 </h1>
                 <TiArrowSortedDown size={15} />
               </div>

@@ -5,6 +5,8 @@ import instagram from "../assets/instagram.png";
 import facebook from "../assets/facebook.png";
 import whatsapp from "../assets/whatsapp.png";
 import logo from "../assets/ta-logo.png";
+import pci from "../assets/pci_logo.png";
+import dmc from "../assets/dmca_footer.png";
 
 const Footer = ({ aboutRef, contactRef }) => {
   const navigate = useNavigate();
@@ -28,7 +30,7 @@ const Footer = ({ aboutRef, contactRef }) => {
       <div className="w-[80%] mx-auto">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between text-center md:text-left">
         <div className="w-full md:w-1/4 mb-8 md:mb-0 ">
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center md:-ml-10 ml-0">
             <div>
               <a
                 onClick={() => scrollToTopAndNavigate("/")}
@@ -185,10 +187,17 @@ const Footer = ({ aboutRef, contactRef }) => {
             <div>
               <img
                 src={badge2}
-                className="w-[220px] "
+                className="w-[270px] h-[45px]"
                 alt="Secure Payment Badge 2"
               />
             </div>
+
+              <div className="flex items-center justify-center gap-2 mt-4">
+               <div className="bg-white w-[100px] h-[50px] md:pt-2 pt-4 px-2 rounded-tl-[40%] rounded-br-[40%]"> <img src={pci} alt="pciPic" className="w-[120px] h-auto"/></div>
+                <div className="bg-white w-[100px] h-[50px] pt-2 px-2 rounded-tl-[40%] rounded-br-[40%]"><img src={dmc} alt="demcPic" className="w-[80px] h-auto"/></div>
+                </div> 
+
+
           </div>
         </div>
       </div>

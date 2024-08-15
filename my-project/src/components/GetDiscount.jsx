@@ -6,16 +6,19 @@ import { useNavigate } from "react-router-dom";
 
 const GetDiscount = () => {
   const [phoneNo, setPhoneNo] = useState('');
-  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false); 
+
+  
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const res = await axios.post(`${baseUrl}/phonelead`, { number: phoneNo });
       if (res.status === 201) {
-          setMessage('Thank you for your interest. We will contact you shortly.');
+         
           setPhoneNo('');
            navigate("/thankyou");
       } else {
@@ -23,6 +26,9 @@ const GetDiscount = () => {
       }
     } catch (err) {
       console.error('Error:', err);
+    }
+    finally{
+      setLoading(false);
     }
   }
   return (
@@ -39,9 +45,9 @@ const GetDiscount = () => {
             value={phoneNo}
             onChange={(e) => setPhoneNo(e.target.value)}
           />
-          <button type="submit" className="uppercase bg-[#F1B815] p-3 rounded-md font-semibold">Get a discount</button>
+          <button type="submit" disabled={loading} className="uppercase bg-[#F1B815] p-3 rounded-md font-semibold">{loading ? 'Please Wait...' : "Get a discount"}</button>
         </form>
-        {message && <p className="mt-4 text-white">{message}</p>}
+        
       </div>
 
       {/* Image Container */}

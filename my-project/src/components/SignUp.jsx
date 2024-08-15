@@ -124,7 +124,7 @@
 //               </div>
 
 //               <div className="flex items-center justify-center gap-4 relative mt-4">
-//                 <button 
+//                 <button
 //                   type="submit"
 //                   className="pr-3 md:text-sm  text-[12px] font-bold rounded-l-lg bg-[#007285] text-white w-[140px] md:w-[160px] h-[40px] md:h-[50px]"
 //                 >
@@ -133,7 +133,7 @@
 //                 <span className="text-center font-semibold text-base absolute -top-1 py-3 lg:py-4 md:py-4 rounded-[50%] bg-white w-12 h-12 md:w-12 md:h-14 ">
 //                   OR
 //                 </span>
-               
+
 //                 <a href={`https://wa.me/447397145697?text=${encodeURIComponent(
 //                 "Hello Team Academians, I want to avail my promo code TA-OFF50."
 //               )}`} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
@@ -141,7 +141,7 @@
 //                   WHATSAPP NOW
 //                 </div>
 //                 </a>
-              
+
 //               </div>
 //             </form>
 //           </div>
@@ -186,7 +186,7 @@
 //         </div>
 //       </div>
 //     </div>
-      
+
 //     </>
 //   );
 // };
@@ -203,6 +203,7 @@ const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate();
 
   const [time, setTime] = useState({
@@ -238,6 +239,8 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // console.log("Loading state before submission:", loading);
+    setLoading(true); // Start loading
     try {
       const data = { name, email, phoneNo };
 
@@ -258,10 +261,14 @@ const SignUp = () => {
         console.log(res);
         navigate("/thankyou");
       } else {
-        console.error('Error:', res);
+        console.error("Error:", res);
       }
     } catch (err) {
-      console.error('Error:', err);
+      console.error("Error:", err);
+    } finally {
+      // console.log("Loading state before setting to false:", loading);
+      setLoading(false); // Set loading to false after submission
+      // console.log("Loading state after setting to false:", loading);
     }
   };
 
@@ -317,11 +324,12 @@ const SignUp = () => {
             </div>
 
             <div className="flex items-center justify-center gap-4 relative mt-6">
-              <button 
+              <button
                 type="submit"
+                disabled={loading}
                 className="pr-3 text-xs sm:text-sm font-bold rounded-l-lg bg-[#007285] text-white w-[45%] sm:w-[140px] md:w-[160px] h-[40px] md:h-[50px] flex-shrink-0"
               >
-                APPLY DISCOUNT
+                {loading ? "Please Wait..." : "APPLY DISCOUNT"}
               </button>
               <span className="text-center font-semibold text-base absolute -top-1 py-3 lg:py-4 md:py-4 rounded-[50%] bg-white w-12 h-12 md:w-12 md:h-14">
                 OR
@@ -345,20 +353,20 @@ const SignUp = () => {
                 <h1 className="w-[50px] sm:w-[60px] h-[50px] sm:h-[60px] bg-[#007285] flex justify-center items-center text-2xl sm:text-3xl text-white font-semibold shadow-numbers rounded-md">
                   0{time.hours}
                 </h1>
-                <h1 className="text-sm uppercase font-semibold mt-1">
-                  Hours
-                </h1>
+                <h1 className="text-sm uppercase font-semibold mt-1">Hours</h1>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-semibold -mt-4 sm:-mt-6">:</h1>
+              <h1 className="text-2xl sm:text-3xl font-semibold -mt-4 sm:-mt-6">
+                :
+              </h1>
               <div className="flex flex-col items-center">
                 <h1 className="w-[50px] sm:w-[60px] h-[50px] sm:h-[60px] bg-[#007285] flex justify-center items-center text-2xl sm:text-3xl text-white font-semibold shadow-numbers rounded-md">
                   {time.minutes}
                 </h1>
-                <h1 className="text-sm uppercase font-semibold ">
-                  Minutes
-                </h1>
+                <h1 className="text-sm uppercase font-semibold ">Minutes</h1>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-semibold -mt-4 sm:-mt-6">:</h1>
+              <h1 className="text-2xl sm:text-3xl font-semibold -mt-4 sm:-mt-6">
+                :
+              </h1>
               <div className="flex flex-col items-center">
                 <h1 className="w-[50px] sm:w-[60px] h-[50px] sm:h-[60px] bg-[#007285] flex justify-center items-center text-2xl sm:text-3xl text-white font-semibold shadow-numbers rounded-md">
                   {time.seconds}
@@ -372,9 +380,13 @@ const SignUp = () => {
         </div>
 
         <div className="bg-green-700 w-full -mt-4 rounded-b-lg flex items-center justify-center gap-2 p-2">
-          <img src={hotOfferIcon} className="w-5 sm:w-6 h-5 sm:h-6" alt="hot offer icon" />
+          <img
+            src={hotOfferIcon}
+            className="w-5 sm:w-6 h-5 sm:h-6"
+            alt="hot offer icon"
+          />
           <h1 className="text-white font-semibold text-xs sm:text-base">
-            Signup & Get Additional $100 Discount
+            Signup & Get Additional £100 Discount
           </h1>
         </div>
       </div>
@@ -383,9 +395,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-
-
-
-
-
-

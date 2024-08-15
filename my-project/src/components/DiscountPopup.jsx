@@ -9,10 +9,13 @@ const DiscountPopup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
+  const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setLoading(true);
     try {
       const data = { name, email, phoneNo };
 
@@ -37,6 +40,9 @@ const DiscountPopup = () => {
       }
     } catch (err) {
       console.error('Error:', err);
+    }
+    finally{
+      setLoading(false);
     }
   };
 
@@ -97,9 +103,10 @@ const DiscountPopup = () => {
           />
           <button
             type="submit"
+            disabled={loading}
             className="p-2 font-bold bg-[#F1B815] text-black rounded-md"
           >
-            GET DISCOUNT
+            {loading ? "Plase Wait...." : "GET DISCOUNT"}
           </button>
         </form>
       </div>
