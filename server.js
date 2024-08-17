@@ -147,7 +147,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://www.academians.co.uk",
+  // origin: "https://www.academians.co.uk",
+   origin: "http://localhost:5173",
   credentials: true,
 }));
 
@@ -182,17 +183,17 @@ const transporter = nodemailer.createTransport({
 
 // Signup route
 app.post('/signup', (req, res) => {
-  const { name, email, phoneNo } = req.body;
+  const { name, email, phone } = req.body;
 
   console.log('Request body:', req.body);
 
-  if (!name || !email || !phoneNo) {
-    console.log('Missing fields:', { name, email, phoneNo });
+  if (!name || !email || !phone) {
+    console.log('Missing fields:', { name, email, phone });
     return res.status(400).json({ message: 'Missing required fields' });
   }
 
-  const query = 'INSERT INTO users (name, email, phoneNo) VALUES (?, ?, ?)';
-  db.query(query, [name, email, phoneNo], (err, result) => {
+  const query = 'INSERT INTO signup (name, email, phone) VALUES (?, ?, ?)';
+  db.query(query, [name, email, phone], (err, result) => {
     if (err) {
       console.error('Error inserting user:', err);
       return res.status(500).json({ message: 'Error creating user' });
@@ -207,7 +208,7 @@ app.post('/signup', (req, res) => {
 
         Name: ${name}
         Email: ${email}
-        Phone Number: ${phoneNo}
+        Phone Number: ${phone}
         Date of Signup: ${new Date().toISOString()}
       `,
     };
@@ -265,6 +266,135 @@ app.post('/phonelead', (req, res) => {
     });
   });
 });
+
+// order-now route
+app.post('/order-now', (req, res) => {
+  const { name, email, phone, total_amount } = req.body;
+
+  // Validate required fields
+  if (!name || !email || !phone || !total_amount) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
+  const prefix = 'TA'; // Set the prefix you want to use, e.g., 'TA' for Tha
+
+  // Query to get the last order number with the specific prefix
+  const getLastOrderNumberQuery = `
+    SELECT order_number 
+    FROM order_now 
+    WHERE order_number LIKE ? 
+    ORDER BY id DESC 
+    LIMIT 1
+  `;
+
+  db.query(getLastOrderNumberQuery, [`${prefix}%`], (err, results) => {
+    if (err) {
+      console.error('Error fetching last order number:', err);
+      return res.status(500).json({ message: 'Error fetching last order number' });
+    }
+
+    let newOrderNumber;
+    if (results.length > 0) {
+      const lastOrderNumber = results[0].order_number;
+      const lastOrderId = parseInt(lastOrderNumber.split('-')[1], 10);
+      // Increment the last order ID for the new order number
+      newOrderNumber = `${prefix}-${lastOrderId + 1}`;
+    } else {
+      // If there are no existing orders, start with a default
+      newOrderNumber = `${prefix}-5001`;
+    }
+
+    console.log(newOrderNumber); // Output the new order number
+    // Query to insert the new order
+    const insertOrderQuery = 'INSERT INTO order_now (name, email, phone, order_number, total_amount) VALUES (?, ?, ?, ?, ?)';
+    db.query(insertOrderQuery, [name, email, phone, newOrderNumber, total_amount], (err, result) => {
+      if (err) {
+        console.error('Error inserting order:', err);
+        return res.status(500).json({ message: 'Error creating order' });
+      }
+
+      // Set up the email options
+      const mailOptions = {
+        from: process.env.SMTP_MAIL, // Ensure this environment variable is set
+        to: 'engrsyedusamaakhtar@gmail.com',
+        subject: 'New Order Placed',
+        text: `
+          A new order has been placed on www.academians.co.uk:
+
+          Name: ${name}
+          Email: ${email}
+          Phone: ${phone}
+          Order Number: ${newOrderNumber}
+          Total Amount: ${total_amount}
+          
+        `,
+      };
+
+      // Send the email
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.error('Error sending email:', error);
+          return res.status(500).json({ message: 'Error sending email' });
+        } else {
+          console.log('Email sent:', info.response);
+          res.status(201).json({ 
+            message: 'Order created and email sent with details!', 
+            order: { 
+              name, 
+              email, 
+              phone, 
+              order_number: newOrderNumber, 
+              total_amount 
+            } 
+          });
+        }
+      });
+    });
+  });
+});
+
+app.get('/last-order-number', (req, res) => {
+  const { prefix } = req.query;
+
+  // Define the order of prefixes to check
+  const prefixesToCheck = prefix ? [prefix] : ['Ta', 'Tha', 'Aly'];
+
+  // Function to get the last order number based on the prefix
+  const getLastOrderNumber = (prefixIndex = 0) => {
+    if (prefixIndex >= prefixesToCheck.length) {
+      return res.json({ order_number: 'No orders found' });
+    }
+
+    const currentPrefix = prefixesToCheck[prefixIndex];
+    const getLastOrderNumberQuery = `
+      SELECT order_number 
+      FROM order_now 
+      WHERE order_number LIKE ? 
+      ORDER BY id DESC 
+      LIMIT 1
+    `;
+
+    db.query(getLastOrderNumberQuery, [`${currentPrefix}%`], (err, results) => {
+      if (err) {
+        console.error('Error fetching last order number:', err);
+        return res.status(500).json({ message: 'Error fetching last order number' });
+      }
+
+      if (results.length > 0) {
+        const lastOrderNumber = results[0].order_number;
+        return res.json({ order_number: lastOrderNumber });
+      } else {
+        // Recursively try the next prefix
+        getLastOrderNumber(prefixIndex + 1);
+      }
+    });
+  };
+
+  // Start the process
+  getLastOrderNumber();
+});
+
+
 
 // Basic Route
 app.get('/', (req, res) => res.send('HRM System API'));

@@ -41,7 +41,7 @@ const ThankYou = () => {
   };
   useEffect(() => {
       
-    document.title = 'Thankyou - Academians UK'; // Set the document title
+    document.title = 'Thank You - Academians UK'; // Set the document title
 }, []);
 
   return (

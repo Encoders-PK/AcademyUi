@@ -8,7 +8,7 @@ import baseUrl from "../baseUrl";
 const ContactUs = ({ contactRef }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
+  const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ const ContactUs = ({ contactRef }) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const data = { name, email, phoneNo };
+      const data = { name, email, phone };
 
       console.log(data);
 
@@ -31,9 +31,15 @@ const ContactUs = ({ contactRef }) => {
       if (res.status === 201) {
         setName("");
         setEmail("");
-        setPhoneNo("");
+        setPhone("");
         console.log(res);
-        navigate("/thankyou");
+        const urlParams = new URLSearchParams({
+          name:encodeURIComponent(name),
+          email:encodeURIComponent(email),
+          phone:encodeURIComponent(phone),
+        
+        })
+        navigate(`/thankyou?${urlParams}`);
         window.scrollTo(0, 0);
       } else {
         console.error("Error:", res);
@@ -163,8 +169,8 @@ const ContactUs = ({ contactRef }) => {
                   type="tel"
                   placeholder="Phone No."
                   required
-                  value={phoneNo}
-                  onChange={(e) => setPhoneNo(e.target.value)}
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
 
                 <button

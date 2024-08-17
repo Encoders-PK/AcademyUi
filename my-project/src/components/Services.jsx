@@ -96,13 +96,13 @@ const Services = () => {
               What Our Experts Can Do
             </h1>
 
-            <div className="flex flex-wrap items-center gap-2 md:gap-6 pt-6 pb-3 pl-2 justify-center md:justify-start">
+            {/* <div className="flex flex-wrap items-center gap-2 md:gap-4 pt-6 pb-3 pl-2 justify-center md:justify-start">
               {tabs.map((tab) => (
                 <ul
                   key={tab.name}
-                  className={`cursor-pointer ${
+                  className={`cursor-pointer  bg-[#F1B815] p-1 rounded-md text-white font-semibold ${
                     activeTab.name === tab.name
-                      ? "font-semibold text-[#408955]"
+                      ? "font-bold bg-[#408955]"
                       : ""
                   }`}
                   onClick={() => setActiveTab(tab)}
@@ -110,7 +110,23 @@ const Services = () => {
                   {tab.name}
                 </ul>
               ))}
-            </div>
+            </div> */}
+
+<div className="flex flex-wrap items-center gap-1 md:gap-4 pt-6 pb-3  justify-center md:justify-start">
+  {tabs.map((tab) => (
+    <div
+      key={tab.name}
+      className={`cursor-pointer bg-[#F1B815] p-1 md:p-2 rounded-md  font-semibold ${
+        activeTab.name === tab.name
+          ? "font-bold text-white"
+          : ""
+      }`}
+      onClick={() => setActiveTab(tab)}
+    >
+      {tab.name}
+    </div>
+  ))}
+</div>
             <div className="border-b border-black mb-6"></div>
 
             <div className="text-center md:text-left md:w-[88%] w-full">
@@ -171,3 +187,4 @@ const Services = () => {
 };
 
 export default Services;
+

@@ -8,7 +8,7 @@ const DiscountPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
+  const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ const DiscountPopup = () => {
 
     setLoading(true);
     try {
-      const data = { name, email, phoneNo };
+      const data = { name, email, phone };
 
       console.log(data);
 
@@ -32,9 +32,14 @@ const DiscountPopup = () => {
       if (res.status === 201) {
         setName("");
         setEmail("");
-        setPhoneNo("");
+        setPhone("");
         setIsVisible(false);
-        navigate("/thankyou");
+        const UrlParams = new URLSearchParams({
+          name:encodeURIComponent(name),
+          email:encodeURIComponent(email),
+          phone:encodeURIComponent(phone)
+        })
+        navigate(`/thankyou?${UrlParams}`);
         window.scrollTo(0, 0);
       } else {
         console.error('Error:', res);
@@ -68,7 +73,7 @@ const DiscountPopup = () => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-[#367285] px-6 pt-4 pb-8 rounded-lg text-white relative md:w-[450px] w-88">
         <button
-          className="absolute top-4 right-4 text-2xl font-bold"
+          className="absolute top-4 right-4 text-3xl font-bold"
           onClick={closePopup}
         >
           ×
@@ -99,8 +104,8 @@ const DiscountPopup = () => {
             placeholder="Phone Number"
             className="p-2 border-2 border-[#EEEEEE] outline-none text-black rounded-md focus:border-blue-500"
             required
-            value={phoneNo}
-            onChange={(e) => setPhoneNo(e.target.value)}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
           />
           <button
             type="submit"

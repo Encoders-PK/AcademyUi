@@ -20,7 +20,10 @@ const GetDiscount = () => {
       if (res.status === 201) {
          
           setPhoneNo('');
-           navigate("/thankyou");
+          const UrlParams = new URLSearchParams({
+            number:encodeURIComponent(phoneNo)
+          });
+           navigate(`/thankyou?${UrlParams}`);
            window.scrollTo(0, 0);
       } else {
         console.error('Error:', res);

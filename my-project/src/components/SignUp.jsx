@@ -202,7 +202,7 @@ import baseUrl from "../baseUrl.js";
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
+  const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate();
 
@@ -242,7 +242,7 @@ const SignUp = () => {
     // console.log("Loading state before submission:", loading);
     setLoading(true); // Start loading
     try {
-      const data = { name, email, phoneNo };
+      const data = { name, email, phone };
 
       console.log(data);
 
@@ -257,9 +257,19 @@ const SignUp = () => {
       if (res.status === 201) {
         setName("");
         setEmail("");
-        setPhoneNo("");
+        setPhone("");
         console.log(res);
-        navigate("/thankyou");
+       
+         // Create the query parameters string
+      const urlParams = new URLSearchParams({
+        name: encodeURIComponent(name),
+        email: encodeURIComponent(email),
+        phone: encodeURIComponent(phone),
+      }).toString();
+
+      // Navigate to the ThankYou page with query parameters
+      navigate(`/thankyou?${urlParams}`);
+      
         window.scrollTo(0, 0);
       } else {
         console.error("Error:", res);
@@ -319,8 +329,8 @@ const SignUp = () => {
                 placeholder="Phone No."
                 required
                 autoComplete="tel"
-                value={phoneNo}
-                onChange={(e) => setPhoneNo(e.target.value)}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
 

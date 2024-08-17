@@ -172,6 +172,14 @@ const Footer = ({ aboutRef, contactRef }) => {
                 Research Help
               </a>
             </li>
+            <li>
+              <a
+                onClick={() => scrollToTopAndNavigate("/coding-help")}
+                className="cursor-pointer hover:underline "
+              >
+                CodingHelp
+              </a>
+            </li>
           </ul>
         </div>
         <div className="w-full md:w-1/5">

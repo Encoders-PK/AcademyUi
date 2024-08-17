@@ -1,15 +1,16 @@
+
 import { BiMessageRoundedDots } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoStarSharp, IoStarHalfOutline } from "react-icons/io5";
-import ukwriters from "../assets/ukwriters.png";
-import trustpilot from "../assets/trustpilot.png";
-import sitejabber from "../assets/sitejabber.png";
+import ukwriters from "../../assets/ukwriters.png";
+import trustpilot from "../../assets/trustpilot.png";
+import sitejabber from "../../assets/sitejabber.png";
 import { LuSunMedium } from "react-icons/lu";
-import featureline from "../assets/featureline.png";
-import SignUp from "./SignUp";
+import featureline from "../../assets/featureline.png";
+import SignUp from "../SignUp";
 import { useEffect } from "react";
 
-const Banner = () => {
+const BannerHelp = () => {
   useEffect(() => {
     // Adding Tawk.to script to the page when the component mounts
     var Tawk_API = Tawk_API || {},
@@ -41,49 +42,18 @@ const Banner = () => {
             {/* Left Container */}
             <div className="text-white  md:w-[65%]">
               <h1 className="text-[#ffb800] font-bold text-xl md:text-2xl">
-                FREE AI Testing REPORT
+              Get A+ with Our Help
               </h1>
               <h1 className="text-white text-2xl md:text-4xl font-bold">
-                TOP NOTCH ACADEMIC HELP BY BRITISH PhD EXPERTS
+              STUCK WITH YOUR CODING ASSIGNMENT?
               </h1>
 
               <img src={featureline} alt="Feature line" className="mt-2" />
 
-
-              <p className="whitespace-pre-wrap py-6 text-sm md:text-base lg:text-lg font-semibold">
-                Team Tutoring providing top quality academic assistance to help
-                students succeed in their academic career
+              <p className="whitespace-pre-wrap font-semibold py-6 text-sm md:text-base lg:text-lg">
+              Get expert help from qualified professionals in just 3 minutes! Join over 100,000 satisfied students
+              who’ve already found success with Academians®.
               </p>
-              
-              <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto md:hidden -mb-6 -mt-6">
-                <button
-                  onClick={handleTalkToExpertClick}
-                  className="flex gap-2 items-center bg-[#ffb800] w-full md:w-[230px] h-10 justify-center rounded-md"
-                >
-                  <BiMessageRoundedDots
-                    className="text-2xl md:text-3xl"
-                    color="white"
-                  />
-                  <h1 className="text-white font-bold text-sm md:text-base">
-                    TALK TO OUR EXPERT
-                  </h1>
-                </button>
-
-                <a
-                  href={`https://wa.me/447397145697?text=${encodeURIComponent(
-                    "Hello Team Academians, I want to avail my promo code TA-OFF50."
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="bg-white w-full md:w-[230px] h-10 flex gap-2 items-center justify-center rounded-md">
-                    <IoLogoWhatsapp className="text-2xl text-[#408955]" />
-                    <h1 className="text-[#408955] font-bold text-sm md:text-base uppercase">
-                      Whatsapp Now
-                    </h1>
-                  </div>
-                </a>
-              </div>
 
               <div className="flex flex-wrap gap-4 py-4">
                 <div className="flex items-center gap-1">
@@ -94,37 +64,37 @@ const Banner = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
+                  <h1 className="text-sm  font-semibold md:text-base lg:text-lg">
                     Best Price
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
+                  <h1 className="text-sm  font-semibold md:text-base lg:text-lg">
                     100% Money Back Guarantee
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
+                  <h1 className="text-sm font-semibold md:text-base lg:text-lg">
                     Top Quality Work
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
+                  <h1 className="text-sm md:text-base  font-semibold lg:text-lg">
                     Plagiarism Free
                   </h1>
                 </div>
                 <div className="flex items-center gap-1">
                   <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
+                  <h1 className="text-sm md:text-base font-semibold  lg:text-lg">
                     On time Deliver
                   </h1>
                 </div>
               </div>
 
-              <div className="md:flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto hidden">
+              <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
                 <button
                   onClick={handleTalkToExpertClick}
                   className="flex gap-2 items-center bg-[#ffb800] w-full md:w-[230px] h-10 justify-center rounded-md"
@@ -139,13 +109,12 @@ const Banner = () => {
                 </button>
 
                 <a
-                  href={`https://wa.me/447397145697?text=${encodeURIComponent(
-                    "Hello Team Academians, I want to avail my promo code TA-OFF50."
-                  )}`}
+                  href="https://wa.me/447397145697"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex gap-2 items-center"
                 >
-                  <div className="bg-white w-full md:w-[230px] h-10 flex gap-2 items-center justify-center rounded-md">
+                  <div className="bg-white w-full md:w-[230px] h-10 flex items-center justify-center rounded-md">
                     <IoLogoWhatsapp className="text-2xl text-[#408955]" />
                     <h1 className="text-[#408955] font-bold text-sm md:text-base uppercase">
                       Whatsapp Now
@@ -245,4 +214,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerHelp;

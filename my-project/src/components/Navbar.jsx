@@ -147,6 +147,14 @@ const Navbar = ({ aboutRef, contactRef }) => {
                       Research Proposal Help
                     </NavLink>
                   </li>
+                  <li className="p-2 hover:bg-gray-100 hover:rounded-md hover:text-blue-300 hover:font-bold cursor-pointer">
+                    <NavLink
+                      to="/coding-help"
+                      className={({ isActive }) => isActive ? "text-blue-400 font-bold" : ""}
+                    >
+                     Coding Help
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             )}
@@ -281,6 +289,14 @@ const Navbar = ({ aboutRef, contactRef }) => {
                       className={({ isActive }) => isActive ? "text-blue-400 font-bold" : ""}
                     >
                       Research Proposal Help
+                    </NavLink>
+                  </li>
+                  <li className="p-2 hover:bg-gray-100 hover:rounded-md hover:text-blue-300 hover:font-bold cursor-pointer">
+                    <NavLink
+                      to="/coding-help"
+                      className={({ isActive }) => isActive ? "text-blue-400 font-bold" : ""}
+                    >
+                     Coding Help
                     </NavLink>
                   </li>
                 </ul>

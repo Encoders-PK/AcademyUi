@@ -15,6 +15,7 @@ import AssignmentExpert from "./Pages/AssignmentExpert";
 import Assignment from "./Pages/Assignment";
 import AssesmentHelp from "./Pages/AssesmentHelp";
 import OrderNow from "./Pages/OrderNow";
+import CodingHelp from "./Pages/CodingHelp";
 
 const App = () => {
 
@@ -51,6 +52,7 @@ const App = () => {
             <Route path="/assignment-expert" element={<AssignmentExpert />} />
             <Route path="/assignment" element={<Assignment />} />
             <Route path="/assessment-help" element={<AssesmentHelp/>} />
+            <Route path="/coding-help" element={<CodingHelp/>} />
             <Route path="/order-now" element={<OrderNow/>} />
 
 
