@@ -112,7 +112,7 @@ const DiscountPopup = () => {
             disabled={loading}
             className="p-2 font-bold bg-[#F1B815] text-black rounded-md"
           >
-            {loading ? "Plase Wait...." : "GET DISCOUNT"}
+            {loading ? "Please Wait...." : "GET DISCOUNT"}
           </button>
         </form>
       </div>
