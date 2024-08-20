@@ -39,7 +39,7 @@ const DiscountPopup = () => {
           email:encodeURIComponent(email),
           phone:encodeURIComponent(phone)
         })
-        navigate(`/thankyou?${UrlParams}`);
+        navigate(`/thankyou2?${UrlParams}`);
         window.scrollTo(0, 0);
       } else {
         console.error('Error:', res);

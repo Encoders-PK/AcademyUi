@@ -4,7 +4,7 @@ const StickyBtn = () => {
   return (
     <div className='bg-white fixed bottom-0 left-0 right-0 mt-24 md:hidden block'>
       <div className="flex  gap-2 py-2 px-2">
-        <div className="bg-[#367285] w-full h-16 flex justify-center rounded-md">
+        <div className="bg-[#FFB800] w-full h-16 flex justify-center rounded-md">
           <div className="flex items-center gap-1 w-full max-w-[470px] mx-auto">
             <h1 className="text-white font-bold text-sm uppercase"></h1>
           </div>

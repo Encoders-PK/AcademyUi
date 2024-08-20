@@ -131,142 +131,6 @@
 //   console.error('Unable to sync database:', error);
 //   process.exit(1);
 // });
-
-require("dotenv").config();
-const express = require("express");
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
-// const dotenv = require('dotenv');
-const mysql = require('mysql2');
-
-// dotenv.config();
-
-const app = express();
-const PORT = process.env.PORT || 5000;
-
-app.use(express.json());
-app.use(cors({
-  // origin: "https://www.academians.co.uk",
-   origin: "http://localhost:5173",
-  credentials: true,
-}));
-
-app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
-app.use(bodyParser.json());
-
-// Setup MySQL connection
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
-
-db.connect(err => {
-  if (err) {
-    console.error('Unable to connect to MySQL:', err);
-    process.exit(1);
-  } else {
-    console.log('Successfully connected to MySQL');
-  }
-});
-
-// Nodemailer setup
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.SMPT_MAIL,
-    pass: process.env.SMPT_PASSWORD,
-  },
-});
-
-// Signup route
-app.post('/signup', (req, res) => {
-  const { name, email, phone } = req.body;
-
-  console.log('Request body:', req.body);
-
-  if (!name || !email || !phone) {
-    console.log('Missing fields:', { name, email, phone });
-    return res.status(400).json({ message: 'Missing required fields' });
-  }
-
-  const query = 'INSERT INTO signup (name, email, phone) VALUES (?, ?, ?)';
-  db.query(query, [name, email, phone], (err, result) => {
-    if (err) {
-      console.error('Error inserting user:', err);
-      return res.status(500).json({ message: 'Error creating user' });
-    }
-
-    const mailOptions = {
-      from: process.env.SMPT_MAIL,
-      to: 'engrsyedusamaakhtar@gmail.com',
-      subject: 'TA SIGNUP',
-      text: `
-        You have a signup on www.academians.co.uk
-
-        Name: ${name}
-        Email: ${email}
-        Phone Number: ${phone}
-        Date of Signup: ${new Date().toISOString()}
-      `,
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error('Error sending email:', error);
-        return res.status(500).json({ message: 'Error sending email' });
-      } else {
-        console.log('Email sent:', info.response);
-        res.status(201).json({ message: 'User created and email sent with details!' });
-      }
-    });
-  });
-});
-
-// Phone Lead route
-app.post('/phonelead', (req, res) => {
-  const { number } = req.body;
-
-  console.log('Request body:', req.body);
-
-  if (!number) {
-    console.log('Missing fields:', { number });
-    return res.status(400).json({ message: 'Missing required fields' });
-  }
-
-  const query = 'INSERT INTO phoneleads (number) VALUES (?)';
-  db.query(query, [number], (err, result) => {
-    if (err) {
-      console.error('Error inserting phone lead:', err);
-      return res.status(500).json({ message: 'Error creating phone lead' });
-    }
-
-    const mailOptions = {
-      from: process.env.SMPT_MAIL,
-      to: 'engrsyedusamaakhtar@gmail.com',
-      subject: 'TA Phone Lead',
-      text: `
-        You have a phone lead on www.academians.co.uk:
-
-        Phone Number: ${number}
-        Date of Lead: ${new Date().toISOString()}
-      `,
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error('Error sending email:', error);
-        return res.status(500).json({ message: 'Error sending email' });
-      } else {
-        console.log('Email sent:', info.response);
-        res.status(201).json({ message: 'Phone lead created and email sent with details!', phoneLead: { number } });
-      }
-    });
-  });
-});
-
 // order-now route
 // app.post('/order-now', (req, res) => {
 //   const { name, email, phone, total_amount } = req.body;
@@ -393,6 +257,144 @@ app.post('/phonelead', (req, res) => {
 //   // Start the process
 //   getLastOrderNumber();
 // });
+
+
+require("dotenv").config();
+const express = require("express");
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
+// const dotenv = require('dotenv');
+const mysql = require('mysql2');
+
+// dotenv.config();
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(express.json());
+app.use(cors({
+  origin: "https://www.academians.co.uk",
+  //  origin: "http://localhost:5173",
+  credentials: true,
+}));
+
+app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+app.use(bodyParser.json());
+
+// Setup MySQL connection
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
+
+db.connect(err => {
+  if (err) {
+    console.error('Unable to connect to MySQL:', err);
+    process.exit(1);
+  } else {
+    console.log('Successfully connected to MySQL');
+  }
+});
+
+// Nodemailer setup
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.SMPT_MAIL,
+    pass: process.env.SMPT_PASSWORD,
+  },
+});
+
+// Signup route
+app.post('/signup', (req, res) => {
+  const { name, email, phone } = req.body;
+
+  console.log('Request body:', req.body);
+
+  if (!name || !email || !phone) {
+    console.log('Missing fields:', { name, email, phone });
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
+  const query = 'INSERT INTO signup (name, email, phone) VALUES (?, ?, ?)';
+  db.query(query, [name, email, phone], (err, result) => {
+    if (err) {
+      console.error('Error inserting user:', err);
+      return res.status(500).json({ message: 'Error creating user' });
+    }
+
+    const mailOptions = {
+      from: process.env.SMPT_MAIL,
+      to: 'engrsyedusamaakhtar@gmail.com',
+      subject: 'TA SIGNUP',
+      text: `
+        You have a signup on www.academians.co.uk
+
+        Name: ${name}
+        Email: ${email}
+        Phone Number: ${phone}
+        Date of Signup: ${new Date().toISOString()}
+      `,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error('Error sending email:', error);
+        return res.status(500).json({ message: 'Error sending email' });
+      } else {
+        console.log('Email sent:', info.response);
+        res.status(201).json({ message: 'User created and email sent with details!' });
+      }
+    });
+  });
+});
+
+// Phone Lead route
+app.post('/phonelead', (req, res) => {
+  const { number } = req.body;
+
+  console.log('Request body:', req.body);
+
+  if (!number) {
+    console.log('Missing fields:', { number });
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
+  const query = 'INSERT INTO phoneleads (number) VALUES (?)';
+  db.query(query, [number], (err, result) => {
+    if (err) {
+      console.error('Error inserting phone lead:', err);
+      return res.status(500).json({ message: 'Error creating phone lead' });
+    }
+
+    const mailOptions = {
+      from: process.env.SMPT_MAIL,
+      to: 'engrsyedusamaakhtar@gmail.com',
+      subject: 'TA Phone Lead',
+      text: `
+        You have a phone lead on www.academians.co.uk:
+
+        Phone Number: ${number}
+        Date of Lead: ${new Date().toISOString()}
+      `,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error('Error sending email:', error);
+        return res.status(500).json({ message: 'Error sending email' });
+      } else {
+        console.log('Email sent:', info.response);
+        res.status(201).json({ message: 'Phone lead created and email sent with details!', phoneLead: { number } });
+      }
+    });
+  });
+});
+
+
 
 // Assuming you have a table named 'orders' with fields: id, name, email, phone, order_number, total_amount
 

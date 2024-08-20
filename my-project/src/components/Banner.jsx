@@ -40,7 +40,7 @@ const Banner = () => {
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-20">
             {/* Left Container */}
             <div className="text-white  md:w-[65%]">
-              <h1 className="text-[#ffb800] font-bold text-xl md:text-2xl">
+              <h1 className="text-[#ffb800] font-bold text-xl md:text-2xl uppercase">
                 FREE AI Testing REPORT
               </h1>
               <h1 className="text-white text-2xl md:text-4xl font-bold">

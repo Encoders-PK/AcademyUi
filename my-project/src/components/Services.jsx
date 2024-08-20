@@ -91,42 +91,24 @@ const Services = () => {
           Services by Us
         </h1>
         <div className="bg-[#F6F8FA] py-14 px-8 rounded-lg shadow-md">
-          <div className="w-full md:w-[70%] lg:h-[720px]  h-auto mx-auto md:mx-0">
+          <div className="w-full md:w-[70%] lg:h-[700px]  h-auto mx-auto md:mx-0">
             <h1 className="uppercase text-xl md:text-3xl font-bold text-[#232E45] text-center md:text-left">
               What Our Experts Can Do
             </h1>
 
-            {/* <div className="flex flex-wrap items-center gap-2 md:gap-4 pt-6 pb-3 pl-2 justify-center md:justify-start">
+            <div className="flex flex-wrap items-center gap-1 md:gap-4 pt-6 pb-3  justify-center md:justify-start">
               {tabs.map((tab) => (
-                <ul
+                <div
                   key={tab.name}
-                  className={`cursor-pointer  bg-[#F1B815] p-1 rounded-md text-white font-semibold ${
-                    activeTab.name === tab.name
-                      ? "font-bold bg-[#408955]"
-                      : ""
+                  className={`cursor-pointer bg-[#F1B815] p-1 md:p-2 rounded-md  font-semibold ${
+                    activeTab.name === tab.name ? "font-bold text-white" : ""
                   }`}
                   onClick={() => setActiveTab(tab)}
                 >
                   {tab.name}
-                </ul>
+                </div>
               ))}
-            </div> */}
-
-<div className="flex flex-wrap items-center gap-1 md:gap-4 pt-6 pb-3  justify-center md:justify-start">
-  {tabs.map((tab) => (
-    <div
-      key={tab.name}
-      className={`cursor-pointer bg-[#F1B815] p-1 md:p-2 rounded-md  font-semibold ${
-        activeTab.name === tab.name
-          ? "font-bold text-white"
-          : ""
-      }`}
-      onClick={() => setActiveTab(tab)}
-    >
-      {tab.name}
-    </div>
-  ))}
-</div>
+            </div>
             <div className="border-b border-black mb-6"></div>
 
             <div className="text-center md:text-left md:w-[88%] w-full">
@@ -187,4 +169,3 @@ const Services = () => {
 };
 
 export default Services;
-

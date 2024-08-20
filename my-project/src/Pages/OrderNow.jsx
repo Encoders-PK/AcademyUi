@@ -12,7 +12,7 @@ import axios from "axios";
 const OrderNow = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
-  const navigate = useNavigate();
+
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,6 +22,11 @@ const OrderNow = () => {
   const [lastOrderNumber, setLastOrderNumber] = useState(""); // State for last order number
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+      
+    document.title = 'Order-Now - Academians UK'; // Set the document title
+}, []);
 
   useEffect(() => {
     // Fetch the last order number when the component mounts
