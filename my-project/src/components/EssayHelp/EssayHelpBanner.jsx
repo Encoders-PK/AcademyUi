@@ -14,7 +14,7 @@ import { useEffect } from "react";
 const EssayHelpBanner = () => {
  
   useEffect(() => {
-    // Adding Tawk.to script to the page when the component mounts
+   
     var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date();
     (function () {

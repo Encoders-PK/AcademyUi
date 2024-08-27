@@ -30,24 +30,24 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "1. Can I talk to the writer working on my Academic?",
+      question: "1. What types of assignments can you help with?",
       answer:
-        "Here at Academians, we believe in open communication between our customers and the writers. Our 24/7 live chat option gives you direct access to your writer, enabling you to discuss all of your order requirements without any barriers. We understand that it is essential for customers to have this connection with their chosen professionals - talk directly today!",
+        `We provide assignment writing help for all forms of assignments, including essays, presentations, case studies, and report writing. Any research help that is required for the drafting, editing, and formatting of an assignment is catered to by our team. With our help, you can get all kinds of academic assignments covered across subjects and disciplines.`,
     },
     {
-      question: "2. Will the writer work according to my order requirements?",
+      question: "2. How do I know my assignment will be done on time?",
       answer:
-        "Our experienced, knowledgeable writers will ensure that they fully understand the instructions provided by you before beginning work on your order. After placing an order with us, one of our subject matter experts is immediately assigned to start crafting a unique and tailored outline specifically for your needs. Though we typically don't need any further clarifications from customers after receiving their orders placed - if we think more information could improve results, we'll be sure get in touch!",
+        `Our service is designed to keep up with tight deadlines, ensuring timely delivery of assignments. When you place an order, specify your deadline, and our team will work diligently on the completion of your assignment way ahead of the deadline. We are available 24/7 for support, and you can reach out anytime to check on the progress of your assignment or if urgent help is needed.`,
     },
     {
-      question: "3. How can I request a revision for my Academic?",
+      question: "3. Will my assignment be original and free from plagiarism?",
       answer:
-        "Our customers' satisfaction is our top priority and we aim to provide maximum convenience for them. We carefully follow all given instructions, with no extra charge for revising the work provided as per your needs - just mark a revision in the user area or reach out at any time to our 24/7 support team!.",
+        `Absolutely. We prioritise originality and academic integrity. Every assignment is created from scratch according to your specifications. At this point, our expert plagiarism control team checks every submission for plagiarism to ensure the final product is entirely original and meets the best conventions of academic honesty.`,
     },
     {
-      question: "4. How do you ensure plagiarism-free writing?",
+      question: "4. What if I need revisions after my assignment is delivered?",
       answer:
-        "We are committed to delivering only original work - each piece carefully crafted and checked by our quality assurance team using advanced plagiarism-checking tools. Our writers have undergone rigorous training in the art of sourcing reliable, authentic material for every project they take on. Rest assured that any order you place with us will come accompanied by a verification report giving you absolute certainty about its authenticity!",
+        `We offer free revisions to ensure that your assignment meets your expectations. If there is anything that needs to be tweaked or any refinements, then let us know and we'll do the same. Your satisfaction is what we work towards, and it has to be ensured that work is delivered tailored as per your requirement. So don't hesitate to ask for revisions within the given revision period to have your assignment exactly the way you want it.`,
     },
     {
       question: "5. How quickly can you complete my order?",

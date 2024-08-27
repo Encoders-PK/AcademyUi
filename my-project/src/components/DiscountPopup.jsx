@@ -79,8 +79,7 @@ const DiscountPopup = () => {
           ×
         </button>
        <div className='mb-2'> <img src={formPic} className='md:w-[400px] w-full' alt="" /></div>
-        {/* <h2 className="text-2xl mb-2">50% DISCOUNT</h2>
-        <p className="text-lg mb-4">ON FIRST ORDER</p> */}
+        
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
             type="text"

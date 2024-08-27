@@ -4,21 +4,21 @@ import womenStd from "../assets/women-stud.png";
 import { IoCloseCircleSharp, IoStarSharp } from "react-icons/io5";
 
 const StickyPopup = () => {
-  const [popupIndex, setPopupIndex] = useState(0); // State to manage which popup is visible
-  const [isPopupVisible, setIsPopupVisible] = useState(true); // State to manage visibility of the popup
-  const [isClosed, setIsClosed] = useState(false); // State to track if the close button has been clicked
+  const [popupIndex, setPopupIndex] = useState(0); 
+  const [isPopupVisible, setIsPopupVisible] = useState(true); 
+  const [isClosed, setIsClosed] = useState(false); 
   const [animation, setAnimation] = useState("animate-slide-up");
 
   useEffect(() => {
-    if (isClosed) return; // If the close button is clicked, do not show any more popups
+    if (isClosed) return; 
 
     const interval = setInterval(() => {
       setAnimation("animate-slide-down");
       setTimeout(() => {
-        setPopupIndex((prevIndex) => (prevIndex + 1) % 3); // Cycle through the 3 popups
+        setPopupIndex((prevIndex) => (prevIndex + 1) % 3); 
         setAnimation("animate-slide-up");
-      }, 500); // Delay to allow for the popup to disappear
-    }, 8000); // Change popup every 8 seconds
+      }, 500); 
+    }, 8000); 
 
     return () => clearInterval(interval);
   }, [isClosed]);

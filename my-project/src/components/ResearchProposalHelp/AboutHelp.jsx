@@ -6,7 +6,7 @@ import { useEffect} from "react";
 const AboutHelp = ({aboutRef}) => {
   
   useEffect(() => {
-    // Adding Tawk.to script to the page when the component mounts
+    
     var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date();
     (function () {
@@ -38,12 +38,7 @@ const AboutHelp = ({aboutRef}) => {
             <br />
             Tailored Support for Your Academic Success
           </h1>
-          {/* <h1 className="text-xl md:text-3xl font-bold px-2 text-[#5A5A5A] md:leading-tight">
-            Welcome to the most Reliable &<br />
-            Affordable
-            <span className="text-[#F1B815]"> Tutoring Help</span> by Top <br />
-            Notch Paki PhD Experts
-          </h1> */}
+          
           <p className="py-6 px-2 font-medium text-sm md:text-base">
             Do you face difficulties with your assignment or dissertation and
             you require professional help? This is your academic guide; our
@@ -55,36 +50,7 @@ const AboutHelp = ({aboutRef}) => {
             support you. Chat now to know more on What Our Experts Can Do
           </p>
 
-          {/* Buttons */}
-          {/* <div className="flex flex-col md:flex-row gap-4 py-8">
-          <a href="https://tawk.to/chat/62b99b88b0d10b6f3e79802d/1g6igf40l" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-            <div className="bg-[#ffb800] w-full md:w-56 h-10 flex justify-center rounded-md">
-              <div className="flex items-center gap-2">
-                <BiMessageRoundedDots
-                  className="text-2xl md:text-3xl"
-                  color="white"
-                />
-                <h1 className="text-white font-bold text-sm uppercase">
-                  TALK TO OUR EXPERT
-                </h1>
-              </div>
-            </div>
-            </a>
-
-            <a href="https://wa.me/447397145697" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
-            <div className="bg-white w-full md:w-56 h-10 flex justify-center rounded-md border border-[#408955]">
-              <div className="flex items-center gap-2">
-                <IoLogoWhatsapp
-                  className="text-2xl md:text-3xl"
-                  color="#408955"
-                />
-                <h1 className="text-[#408955] font-bold text-sm uppercase">
-                  Whatsapp Now
-                </h1>
-              </div>
-            </div>
-            </a>
-          </div> */}
+          
 
           <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto">
             <button
