@@ -16,7 +16,7 @@ import Assignment from "./Pages/Assignment";
 import AssesmentHelp from "./Pages/AssesmentHelp";
 import OrderNow from "./Pages/OrderNow";
 import CodingHelp from "./Pages/CodingHelp";
-import GoogleTagManager from "./components/GoogleTagManager";
+import AssignmentOffer from "./Pages/AssignmentOffer";
 
 const App = () => {
 
@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div>
 
-        <GoogleTagManager/>
+       
       <Router>
         <div>
           <Routes>
@@ -54,6 +54,7 @@ const App = () => {
             <Route path="/assignment-expert" element={<AssignmentExpert />} />
             <Route path="/assignment" element={<Assignment />} />
             <Route path="/assessment-help" element={<AssesmentHelp/>} />
+            <Route path="/assignment-offer" element={<AssignmentOffer/>} />
             <Route path="/coding-help" element={<CodingHelp/>} />
             <Route path="/order-now" element={<OrderNow/>} />
 
