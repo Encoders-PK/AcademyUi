@@ -419,19 +419,19 @@ app.post('/order-now', (req, res) => {
     if (results.length > 0) {
       const lastOrderNumber = results[0].order_number;
 
-      // Extract the numeric part from the order number after the prefix
+      
       const orderNumberPart = parseInt(lastOrderNumber.split('-')[1], 10);
 
       if (isNaN(orderNumberPart)) {
-        // Handle the case where the numeric part is not a number
+      
         return res.status(500).json({ message: 'Invalid last order number format' });
       } else {
-        // Increment the numeric part
+        
         const newNumberPart = orderNumberPart + 1;
         newOrderNumber = `TA-${newNumberPart}`;
       }
     } else {
-      // If there are no existing order numbers, start with TA-80000
+    
       newOrderNumber = 'TA-80000';
     }
 
@@ -445,7 +445,7 @@ app.post('/order-now', (req, res) => {
 
       // Set up the email options
       const mailOptions = {
-        from: process.env.SMTP_MAIL,  // Ensure this environment variable is set
+        from: process.env.SMTP_MAIL,  
         to: 'engrsyedusamaakhtar@gmail.com',
         subject: 'New Order Placed',
         text: `
@@ -496,11 +496,11 @@ app.get('/last-order-number', (req, res) => {
     if (results.length > 0) {
       const lastOrderNumber = results[0].order_number;
 
-      // Extract the numeric part from the order number after the prefix
+      
       const orderNumberPart = parseInt(lastOrderNumber.split('-')[1], 10);
       
       if (isNaN(orderNumberPart)) {
-        // Handle the case where the numeric part is not a number
+        
         res.json({ order_number: 'Invalid order number format' });
       } else {
         // Increment the numeric part
@@ -509,7 +509,7 @@ app.get('/last-order-number', (req, res) => {
         res.json({ order_number: newOrderNumber });
       }
     } else {
-      // If there are no existing order numbers, start with TA-80000
+      
       res.json({ order_number: 'TA-80000' });
     }
   });

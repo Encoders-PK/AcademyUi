@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import hotOfferIcon from "../assets/hotOfferIcon.png";
-import baseUrl from "../baseUrl.js";
+// import baseUrl from "../baseUrl.js";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -57,9 +57,9 @@ const SignUp = () => {
         },
       };
 
-      const res = await axios.post(`${baseUrl}/signup`, data, config);
+      const res = await axios.post(`https://be.academians.co.uk/api/signup.php`, data, config);
 
-      if (res.status === 201) {
+      if (res.status === 201 || res.status === 200) {
         setName("");
         setEmail("");
         setPhone("");

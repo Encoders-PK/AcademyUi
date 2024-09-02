@@ -16,8 +16,8 @@ const GetDiscount = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(`${baseUrl}/phonelead`, { number: phoneNo });
-      if (res.status === 201) {
+      const res = await axios.post(`https://be.academians.co.uk/api/phonelead.php`, { number: phoneNo });
+      if (res.status === 201 || res.status === 200) {
          
           setPhoneNo('');
           const UrlParams = new URLSearchParams({
@@ -47,6 +47,7 @@ const GetDiscount = () => {
             type="text"
             placeholder="Enter your phone No"
             value={phoneNo}
+            required
             onChange={(e) => setPhoneNo(e.target.value)}
           />
           <button type="submit" disabled={loading} className="uppercase bg-[#F1B815] p-3 rounded-md font-semibold">{loading ? 'Please Wait...' : "Get a discount"}</button>

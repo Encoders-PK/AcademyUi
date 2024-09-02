@@ -50,7 +50,7 @@ const ThankYou2 = () => {
       <Navbar aboutRef={aboutRef} contactRef={contactRef} />
       <div className="flex items-center justify-center py-12 px-4">
         <div className="bg-white max-w-3xl w-full shadow-xl px-6 py-8 md:px-10 md:py-12">
-          <h1 className="text-[#4D5C6E] font-semibold text-2xl md:text-4xl pb-6 pt-12">
+          <h1 className="text-[#4D5C6E] font-semibold text-2xl md:text-4xl pb-6 pt-12 text-center">
             CONGRATULATIONS
           </h1>
           <h3 className="text-[#4D5C6E] text-sm md:text-base py-4 md:py-8">
@@ -58,11 +58,11 @@ const ThankYou2 = () => {
             <a
               className="text-blue-600 cursor-pointer"
               onClick={() => scrollToTopAndNavigate('/')}
-            ><span className="font-semibold">Academians UK</span></a>. Your key
+            ><span className="font-semibold bg-[#020621] text-white">Academians UK</span></a>. Your key
             manager will be connected to you shortly via{" "}
             <a href="tel:+441618189341" className="text-blue-600" target="_blank"
               rel="noopener noreferrer">
-              phone call
+              Phone call
             </a>{" "}
             and {" "}<a
               href={`https://wa.me/447397145697?text=${encodeURIComponent(

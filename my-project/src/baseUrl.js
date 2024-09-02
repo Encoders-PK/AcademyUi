@@ -1,6 +1,4 @@
-const baseUrl = "https://be.academians.co.uk";
-// const baseUrl = "http://localhost:5000";
-
+const baseUrl = "https://be.academians.co.uk/api";
 
 
  export default baseUrl;
